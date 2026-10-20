@@ -1,0 +1,1214 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>100 Most Common Errors - Grammar Workbook</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Patrick+Hand&display=swap">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --panel:#F7F1F1;
+    --bubble:#F3ECEC;
+    --ink:#241315;
+    --ink-soft:#5B4547;
+    --ink-faint:#95827F;
+    --line:#E7D9D8;
+    --line-strong:#D3BEBC;
+--red: #6D28A8;
+--red-fill: #6D28A8;
+--red-mid: #8B45C5;
+--red-soft: #6D28A80f;
+--red-soft2: #6D28A81a;
+    --yellow:#F0C929;
+    --good:#2C7A4B;
+    --good-bg:#2C7A4B1a;
+    --bad:#B3661A;
+    --bad-bg:#B3661A1a;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1C1315;
+      --panel:#241A1C;
+      --bubble:#2C2022;
+      --ink:#F2E7E7;
+      --ink-soft:#C7ABAC;
+      --ink-faint:#8F7576;
+      --line:#3A2A2C;
+      --line-strong:#4E393B;
+--red: #C084FC;
+--red-fill: #3B175B;
+--red-mid: #D8B4FE;
+--red-soft: #C084FC14;
+--red-soft2: #C084FC26;
+      --yellow:#F0C929;
+      --good:#5FCB8C;
+      --good-bg:#5FCB8C1f;
+      --bad:#E0995A;
+      --bad-bg:#E0995A1f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1C1315;
+    --panel:#241A1C;
+    --bubble:#2C2022;
+    --ink:#F2E7E7;
+    --ink-soft:#C7ABAC;
+    --ink-faint:#8F7576;
+    --line:#3A2A2C;
+    --line-strong:#4E393B;
+--red: #C084FC;
+--red-fill: #3B175B;
+--red-mid: #D8B4FE;
+--red-soft: #C084FC14;
+--red-soft2: #C084FC26;
+    --yellow:#F0C929;
+    --good:#5FCB8C;
+    --good-bg:#5FCB8C1f;
+    --bad:#E0995A;
+    --bad-bg:#E0995A1f;
+    color-scheme: dark;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter", sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 20px; }
+  h1,h2,h3{ font-family:"Poppins", sans-serif; text-wrap:balance; }
+  a{ color:var(--red-mid); }
+  .kicker{
+    font-family:"Inter", sans-serif;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    opacity:.75;
+    margin:0 0 4px;
+  }
+
+  /* Top masthead */
+  .top-masthead{ background:var(--red-fill); color:#fff; padding:34px 20px 32px; }
+  .top-masthead-inner{ max-width:920px; margin:0 auto; }
+  .top-masthead h1{ margin:0; font-size:clamp(1.6rem,4.5vw,2.2rem); font-weight:700; }
+  .top-masthead .progress-note{ margin:10px 0 0; font-size:.88rem; opacity:.85; }
+
+  /* Contents */
+  .contents{ margin:36px 0 8px; }
+  .contents-title{ margin:0 0 16px; font-size:1.1rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); font-weight:600; }
+  .contents-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+  .contents-card{
+    display:flex; gap:12px; align-items:flex-start;
+    padding:13px 15px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    text-decoration:none;
+    color:inherit;
+  }
+  .contents-card:hover{ border-color:var(--red-mid); }
+  .contents-num{
+    flex:0 0 auto; width:28px; height:28px;
+    background:var(--yellow); color:#26260a;
+    font-family:"Poppins",sans-serif; font-weight:700; font-size:13px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:6px;
+  }
+  .contents-text{ font-family:"Poppins",sans-serif; color:var(--ink); font-size:.92rem; font-weight:600; line-height:1.35; }
+
+  /* Topic pager */
+  .topic-pager{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin:52px 0 22px; flex-wrap:wrap; }
+  .topic-pager a, .topic-pager span.disabled{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:7px 14px; border-radius:20px;
+    border:1.5px solid var(--line-strong);
+    font-family:"Poppins",sans-serif; font-weight:600; font-size:.82rem;
+    color:var(--ink-soft); text-decoration:none;
+  }
+  .topic-pager a:hover{ border-color:var(--red-mid); color:var(--red-mid); }
+  .topic-pager span.disabled{ opacity:.4; }
+  .topic-pager .count{ font-family:"IBM Plex Mono",monospace; font-size:.78rem; color:var(--ink-faint); }
+
+  /* Topic hero (full-bleed) */
+  .unit-hero{ background:var(--red-fill); color:#fff; padding:28px 0 26px; margin:0; }
+  .unit-hero-inner{ max-width:920px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:18px; }
+  .unit-badge{
+    flex:0 0 auto; width:52px; height:52px;
+    background:var(--yellow); color:#26260a;
+    font-family:"Poppins", sans-serif; font-weight:700; font-size:24px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:8px;
+  }
+  .unit-hero h1{ margin:0; font-size:clamp(1.5rem,4.5vw,2.1rem); font-weight:700; }
+  .unit-hero .kicker{ opacity:.75; }
+
+  .lede{ font-size:1.02rem; color:var(--ink-soft); }
+  .lede strong{ color:var(--ink); font-weight:600; }
+
+  .term-list{ list-style:none; margin:18px 0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .term-list li{
+    background:var(--panel); border:1px solid var(--line); border-left:4px solid var(--red-mid);
+    border-radius:6px; padding:10px 14px;
+  }
+
+  .notes-box{
+    margin-top:18px; padding:14px 18px;
+    background:var(--red-soft); border:1px solid var(--red-soft2);
+    border-radius:8px; font-size:.93rem; color:var(--ink-soft);
+  }
+  .notes-box b{ color:var(--ink); }
+  .notes-box div + div{ margin-top:6px; }
+
+  .mistake-pair{ display:flex; flex-wrap:wrap; gap:20px; margin:16px 0; }
+  .mistake-col{ flex:1 1 260px; }
+  .mistake-col h5{ margin:0 0 8px; font-size:.76rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); font-family:"Poppins",sans-serif; }
+  .mistake-col div{ margin-bottom:6px; font-size:.94rem; }
+  .mistake-col.wrong div::before{ content:"\2717  "; color:var(--bad); font-weight:700; }
+  .mistake-col.right div::before{ content:"\2713  "; color:var(--good); font-weight:700; }
+
+  /* Speech bubbles */
+  .bubble-field{ display:flex; flex-wrap:wrap; gap:16px; margin:18px 0 6px; }
+  .bubble{
+    background:var(--bubble); border:1px solid var(--line); border-radius:14px;
+    padding:16px 18px; flex:1 1 260px; max-width:420px;
+    font-family:"Patrick Hand", cursive; font-size:1.15rem; line-height:1.35;
+    color:var(--ink); position:relative;
+  }
+  .bubble b{ color:var(--red-mid); }
+  .bubble::after{
+    content:""; position:absolute; width:16px; height:16px; background:var(--bubble);
+    border-left:1px solid var(--line); border-bottom:1px solid var(--line);
+    bottom:-8px; left:28px; transform:rotate(-45deg);
+  }
+  .bubble:nth-child(even)::after{ left:auto; right:28px; }
+  .bubble.exercise-bubble{ font-family:"Inter",sans-serif; font-size:.98rem; line-height:1.65; max-width:460px; }
+  .bubble.exercise-bubble .blank{ margin:0 2px; }
+
+  /* Meme / illustration placeholder */
+  .meme-placeholder{
+    margin:18px 0; padding:22px;
+    border:1.5px dashed var(--line-strong);
+    border-radius:10px;
+    background:var(--panel);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    text-align:center;
+  }
+  .meme-placeholder .icon{ font-size:1.6rem; }
+  .meme-placeholder .caption{ font-size:.86rem; color:var(--ink-faint); font-style:italic; max-width:480px; }
+
+  /* Original illustrations */
+  .illustration-card{
+    margin:18px 0; padding:20px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:var(--panel);
+  }
+  .illustration-card svg{ width:100%; height:auto; display:block; color:var(--ink-soft); }
+  .illustration-card img{ width:100%; height:auto; display:block; border-radius:6px; }
+  .illustration-card figcaption{ margin-top:10px; font-size:.82rem; color:var(--ink-faint); font-style:italic; text-align:center; }
+
+  /* Exercises */
+  .exercise{ margin-top:28px; padding:22px 22px 20px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
+  .exercise-num{
+    display:inline-block; font-family:"Poppins",sans-serif; font-weight:700; color:#fff;
+    background:var(--red-fill); font-size:.85rem; padding:3px 9px; border-radius:5px;
+    margin-right:10px; vertical-align:middle;
+  }
+  .exercise h3{ margin:0 0 6px; font-size:1.1rem; display:flex; align-items:center; }
+  .exercise .instructions{ color:var(--ink-soft); font-size:.94rem; margin:0 0 16px; }
+
+  .cloze-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+  .cloze-list li{ line-height:2.1; }
+  .cloze-list .qnum{ font-family:"IBM Plex Mono",monospace; color:var(--ink-faint); font-size:.85rem; margin-right:4px; }
+  .blank{
+    font-family:"Inter",sans-serif; font-size:.96rem; padding:4px 7px;
+    border:1.5px solid var(--line-strong); border-radius:5px;
+    background:var(--paper); color:var(--ink); min-width:90px; margin:0 2px;
+  }
+  .blank:focus{ outline:2px solid var(--red-mid); outline-offset:1px; }
+  .blank.correct{ border-color:var(--good); background:var(--good-bg); }
+  .blank.incorrect{ border-color:var(--bad); background:var(--bad-bg); }
+
+  .exercise-controls{ margin-top:18px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  button.btn{
+    font-family:"Poppins",sans-serif; font-weight:600; font-size:.88rem; padding:9px 18px;
+    border-radius:6px; border:1.5px solid var(--red-fill); background:var(--red-fill); color:#fff; cursor:pointer;
+  }
+  button.btn.secondary{ background:transparent; color:var(--red-mid); border-color:var(--line-strong); }
+  button.btn:hover{ filter:brightness(1.08); }
+  .score{ font-family:"IBM Plex Mono",monospace; font-size:.88rem; color:var(--ink-soft); }
+  .score.done{ color:var(--good); font-weight:600; }
+
+  /* Matching */
+  .match-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  @media (max-width:560px){ .match-grid{ grid-template-columns:1fr; } }
+  .match-col h4{ margin:0 0 10px; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .match-item{
+    padding:10px 12px; margin-bottom:8px; background:var(--paper);
+    border:1.5px solid var(--line-strong); border-radius:6px; font-size:.94rem; cursor:pointer; user-select:none;
+  }
+  .match-item.selected{ border-color:var(--red-mid); box-shadow:0 0 0 2px var(--red-soft2); }
+  .match-item.matched{ border-color:var(--good); background:var(--good-bg); cursor:default; }
+  .match-item.wrong{ border-color:var(--bad); background:var(--bad-bg); }
+  .match-item .tag{ display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:.78rem; color:var(--ink-faint); margin-right:8px; }
+
+  /* Word bank + chips */
+  .word-bank{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; min-height:14px; }
+  .word-chip{
+    font-family:"IBM Plex Mono",monospace; font-size:.85rem; padding:5px 11px; border-radius:14px;
+    background:var(--red-soft2); color:var(--red-mid); border:1px solid var(--red-soft2);
+  }
+  .word-chip.selectable{ cursor:pointer; user-select:none; }
+  .word-chip.chip-selected{ outline:2px solid var(--red-mid); outline-offset:1px; }
+  .word-chip.chip-correct{ background:var(--good-bg); color:var(--good); border-color:var(--good); }
+  .word-chip.chip-incorrect{ background:var(--bad-bg); color:var(--bad); border-color:var(--bad); }
+
+  /* Choice exercise */
+  .choice-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .choice-list li{ line-height:2.2; }
+  .choice-list .qnum{ font-family:"IBM Plex Mono",monospace; color:var(--ink-faint); font-size:.85rem; margin-right:4px; }
+  .choice-pill{
+    display:inline-block; padding:5px 13px; border-radius:16px; border:1.5px solid var(--line-strong);
+    font-family:"IBM Plex Mono",monospace; font-size:.85rem; cursor:pointer; color:var(--ink-soft);
+    background:var(--paper); user-select:none; margin:0 3px;
+  }
+  .choice-pill.selected{ border-color:var(--red-mid); color:var(--red-mid); background:var(--red-soft2); }
+  .choice-pill.correct{ border-color:var(--good); background:var(--good-bg); color:var(--good); }
+  .choice-pill.incorrect{ border-color:var(--bad); background:var(--bad-bg); color:var(--bad); }
+
+  /* Reference table */
+  .ref-table{ width:100%; border-collapse:collapse; margin:18px 0; font-size:.94rem; }
+  .ref-table th, .ref-table td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
+  .ref-table th{ font-family:"Poppins",sans-serif; font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); }
+
+  /* Closing note */
+  .closing-note{
+    margin:52px 0 0; background:var(--red-fill); color:#fff; border-radius:12px; padding:26px 26px 24px; text-align:center;
+  }
+  .closing-note h3{ margin:0 0 8px; font-size:1.3rem; font-style:italic; }
+  .closing-note p{ margin:0; opacity:.9; }
+
+  footer{ max-width:920px; margin:40px auto 0; padding:20px 0 80px; border-top:1px solid var(--line); font-size:.8rem; color:var(--ink-faint); }
+</style>
+
+<div class="top-masthead">
+  <div class="top-masthead-inner">
+    <p class="kicker">Interactive workbook for Roch</p>
+    <h1>Unit 1 Interactive Workbook</h1>
+    <p class="progress-note">9 interactive grammar units &mdash; explanations, common mistakes, and practice.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="contents" id="top">
+    <h2 class="contents-title">Contents</h2>
+    <div class="contents-grid" id="contents-grid"></div>
+  </div>
+</div>
+
+<div id="topics-root"></div>
+
+<div class="wrap">
+  <div class="closing-note">
+    <h3>Keep Practising!</h3>
+    <p>9 essential units completed &mdash; review your answers, master the rules, and check back for more units soon.</p>
+  </div>
+  <footer>
+    Original explanations, examples, and exercises by the author. Diagrams on this page are original illustrations, redrawn for this workbook.
+  </footer>
+</div>
+
+<script>
+function normalize(s){
+  return (s||"").toLowerCase().trim().replace(/[.,!?]/g,"").replace(/\s+/g," ").replace(/-/g," ");
+}
+function altSet(answers){ return answers.map(normalize); }
+
+/* ---------- Generic cloze (token-based, supports multiple blanks per line) ---------- */
+function buildTokenCloze(exId, containerId, lines){
+  const container = document.getElementById(containerId);
+  lines.forEach(line=>{
+    const li = document.createElement('li');
+    li.innerHTML = line.replace(/\{(\d+)(?:\|(given):([^}]*))?\}/g, (m, idx, g, val)=>{
+      if(g==='given') return '<input class="blank correct" type="text" data-idx="'+idx+'" value="'+val+'" disabled>';
+      return '<input class="blank" type="text" data-idx="'+idx+'" autocomplete="off">';
+    });
+    container.appendChild(li);
+  });
+}
+function checkExercise(exId){
+  const inputs = document.querySelectorAll('#'+exId+' .blank:not([disabled])');
+  let correct = 0;
+  inputs.forEach(inp=>{
+    const idx = +inp.dataset.idx;
+    const ok = altSet(EX[exId][idx]).includes(normalize(inp.value));
+    inp.classList.remove('correct','incorrect');
+    inp.classList.add(ok?'correct':'incorrect');
+    if(ok) correct++;
+  });
+  const scoreEl = document.getElementById(exId+'-score');
+  scoreEl.textContent = correct+' / '+inputs.length+' correct';
+  scoreEl.classList.toggle('done', correct===inputs.length);
+}
+function revealExercise(exId){
+  const inputs = document.querySelectorAll('#'+exId+' .blank:not([disabled])');
+  inputs.forEach(inp=>{
+    const idx = +inp.dataset.idx;
+    inp.value = EX[exId][idx][0];
+    inp.classList.remove('correct','incorrect');
+    inp.classList.add('correct');
+  });
+  document.getElementById(exId+'-score').textContent = 'Answers revealed';
+}
+function resetExercise(exId){
+  const inputs = document.querySelectorAll('#'+exId+' .blank:not([disabled])');
+  inputs.forEach(inp=>{ inp.value=''; inp.classList.remove('correct','incorrect'); });
+  document.getElementById(exId+'-score').textContent = '';
+}
+function buildBank(exId, containerId, words){
+  const bank = document.getElementById(containerId);
+  words.forEach(w=>{
+    const c = document.createElement('span');
+    c.className='word-chip';
+    c.textContent = w;
+    bank.appendChild(c);
+  });
+}
+
+/* ---------- Matching exercise (generic) ---------- */
+const MATCH = {};
+function renderMatch(exId, pairs){
+  MATCH[exId] = { pairs, selected:null, matchedCount:0 };
+  const leftCol = document.getElementById(exId+'-left');
+  const rightCol = document.getElementById(exId+'-right');
+  leftCol.innerHTML=''; rightCol.innerHTML='';
+  const rightShuffled = pairs.map(p=>p.key).sort(()=>Math.random()-0.5);
+  pairs.forEach((p,i)=>{
+    const el = document.createElement('div');
+    el.className='match-item'; el.dataset.id=i;
+    el.innerHTML = '<span class="tag">'+(i+1)+'</span>'+p.desc;
+    el.onclick = ()=>selectDesc(exId, i, el);
+    leftCol.appendChild(el);
+  });
+  const letters = 'abcdefghij';
+  rightShuffled.forEach((key,i)=>{
+    const label = pairs.find(p=>p.key===key).label;
+    const el = document.createElement('div');
+    el.className='match-item'; el.dataset.key=key;
+    el.innerHTML = '<span class="tag">'+letters[i]+'</span>'+label;
+    el.onclick = ()=>selectTerm(exId, key, el);
+    rightCol.appendChild(el);
+  });
+}
+function selectDesc(exId, id, el){
+  if(el.classList.contains('matched')) return;
+  document.querySelectorAll('#'+exId+'-left .match-item').forEach(e=>e.classList.remove('selected'));
+  el.classList.add('selected');
+  MATCH[exId].selected = id;
+}
+function selectTerm(exId, key, el){
+  const state = MATCH[exId];
+  if(el.classList.contains('matched') || state.selected===null) return;
+  const pair = state.pairs[state.selected];
+  const leftEl = document.querySelector('#'+exId+'-left .match-item[data-id="'+state.selected+'"]');
+  if(pair.key===key){
+    leftEl.classList.add('matched'); leftEl.classList.remove('selected');
+    el.classList.add('matched');
+    state.matchedCount++;
+    document.getElementById(exId+'-score').textContent = state.matchedCount+' / '+state.pairs.length+' matched';
+    document.getElementById(exId+'-score').classList.toggle('done', state.matchedCount===state.pairs.length);
+  } else {
+    el.classList.add('wrong');
+    setTimeout(()=>{ el.classList.remove('wrong'); leftEl.classList.remove('selected'); },500);
+  }
+  state.selected = null;
+}
+function resetMatch(exId){
+  document.getElementById(exId+'-score').textContent = '';
+  renderMatch(exId, MATCH[exId].pairs);
+}
+
+/* ---------- Choice exercise (generic) ---------- */
+const CHOICE = {};
+function renderChoice(exId, qs){
+  CHOICE[exId] = qs;
+  const list = document.getElementById(exId+'-list');
+  list.innerHTML='';
+  qs.forEach((q,i)=>{
+    const li = document.createElement('li');
+    li.dataset.idx = i;
+    let optsHtml = '';
+    q.options.forEach(opt=>{ optsHtml += '<span class="choice-pill" data-opt="'+opt+'">'+opt+'</span>'; });
+    li.innerHTML = '<span class="qnum">'+(i+1)+'</span> '+q.text+' '+optsHtml+' '+q.suffix;
+    li.querySelectorAll('.choice-pill').forEach(pill=>{
+      pill.onclick = ()=>{
+        li.querySelectorAll('.choice-pill').forEach(p=>p.classList.remove('selected','correct','incorrect'));
+        pill.classList.add('selected');
+      };
+    });
+    list.appendChild(li);
+  });
+}
+function checkChoice(exId){
+  const items = document.querySelectorAll('#'+exId+' .choice-list li');
+  let correct = 0;
+  items.forEach(li=>{
+    const idx = +li.dataset.idx;
+    const answer = CHOICE[exId][idx].answer;
+    const selected = li.querySelector('.choice-pill.selected');
+    li.querySelectorAll('.choice-pill').forEach(p=>p.classList.remove('correct','incorrect'));
+    if(selected && selected.dataset.opt===answer){ selected.classList.add('correct'); correct++; }
+    else if(selected){ selected.classList.add('incorrect'); }
+  });
+  const scoreEl = document.getElementById(exId+'-score');
+  scoreEl.textContent = correct+' / '+items.length+' correct';
+  scoreEl.classList.toggle('done', correct===items.length);
+}
+function revealChoice(exId){
+  const items = document.querySelectorAll('#'+exId+' .choice-list li');
+  items.forEach(li=>{
+    const idx = +li.dataset.idx;
+    const answer = CHOICE[exId][idx].answer;
+    li.querySelectorAll('.choice-pill').forEach(p=>{
+      p.classList.remove('selected','incorrect','correct');
+      if(p.dataset.opt===answer) p.classList.add('correct');
+    });
+  });
+  document.getElementById(exId+'-score').textContent = 'Answers revealed';
+}
+function resetChoice(exId){
+  renderChoice(exId, CHOICE[exId]);
+  document.getElementById(exId+'-score').textContent = '';
+}
+</script>
+
+<script>
+const EX = {};
+
+const TOPICS = [
+
+/* =========================================================
+   Unit 1: Present Continuous
+   ========================================================= */
+{ id:'t1', num:1, title:"Present Continuous",
+  blocks:[
+    {type:'p', html:"We use the <strong>present continuous</strong> (<strong>am / is / are + verb-ing</strong>) to talk about actions happening right now at the moment of speaking, or temporary situations happening around now."},
+    {type:'reftable', headers:["Subject","Positive (+)","Negative (-)","Question (?)"], rows:[
+      ["I","I <strong>am working</strong>","I <strong>am not working</strong>","<strong>Am I working</strong>?"],
+      ["He / She / It","He <strong>is working</strong>","He <strong>isn't working</strong>","<strong>Is he working</strong>?"],
+      ["You / We / They","We <strong>are working</strong>","We <strong>aren't working</strong>","<strong>Are we working</strong>?"]
+    ]},
+    {type:'bubbles', items:[
+      "“What <b>are you doing</b> right now?” “I<b>'m studying</b> for my English test.”",
+      "Look outside &mdash; it <b>is snowing</b> heavily!",
+      "Please be quiet, the baby <b>is sleeping</b> in the next room.",
+      "We <b>aren't watching</b> television; we<b>'re listening</b> to a podcast."
+    ]},
+    {type:'notes', items:[
+      "<b>Spelling rules for -ing:</b>",
+      "&bull; Most verbs: add <b>-ing</b> (<i>work &rarr; working, read &rarr; reading</i>).",
+      "&bull; Verbs ending in <b>-e</b>: drop the <b>-e</b> (<i>write &rarr; writing, make &rarr; making</i>).",
+      "&bull; Short vowel + one consonant: double the consonant (<i>run &rarr; running, swim &rarr; swimming, sit &rarr; sitting</i>).",
+      "&bull; State verbs (e.g. <i>like, love, know, understand, need, want</i>) are <b>not</b> normally used in the continuous form."
+    ]},
+    {type:'image', src:"present_cont.png", caption:"Present continuous: they are doing these things at the moment."
+    },
+    {type:'mistakes',
+      wrong:[
+        "I watching TV right now.",
+        "He is runing in the park.",
+        "I am knowing the answer to this question.",
+        "She is make a cake in the kitchen."
+      ],
+      right:[
+        "I am watching TV right now. (always include am/is/are)",
+        "He is running in the park. (double the consonant: run &rarr; running)",
+        "I know the answer to this question. ('know' is a state verb)",
+        "She is making a cake in the kitchen. (drop the -e and add -ing)"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t1ex1', tag:'1.1', title:"Complete with the present continuous", instr:"Put the verb in brackets into the present continuous tense.",
+      lines:[
+        "Listen! The birds {0|given: are singing} (sing) in the garden.",
+        "Oliver {1} (write) an email to his teacher.",
+        "We {2} (not watch) a film right now. (watch)",
+        "The children {3} (swim) in the pool.",
+        "I {4} (make) a cup of tea for us.",
+        "Look at the dog! It {5} (chase) a ball across the grass.",
+        "They {6} (not work) today because it is Sunday. (work)",
+        "Sophie {7} (sit) on the balcony reading a book."
+      ],
+      answers:[
+        ["are singing"],
+        ["is writing","'s writing"],
+        ["aren't watching","are not watching"],
+        ["are swimming"],
+        ["am making","'m making"],
+        ["is chasing","'s chasing"],
+        ["aren't working","are not working"],
+        ["is sitting","'s sitting"]
+      ]
+    },
+    { type:'choice', id:'t1ex2', tag:'1.2', title:"Choose the correct form", instr:"Select the correct option to complete each sentence.",
+      qs:[
+        {text:"Look out the window!", options:["It rains","It is raining"], suffix:"heavily right now.", answer:"It is raining"},
+        {text:"Please be quiet.", options:["I try","I am trying"], suffix:"to concentrate on my work.", answer:"I am trying"},
+        {text:"Where is George?", options:["He is running","He is runing"], suffix:"in the park.", answer:"He is running"},
+        {text:"Excuse me,", options:["do you know","are you knowing"], suffix:"the time?", answer:"do you know"},
+        {text:"The students", options:["aren't listening","not listening"], suffix:"to the teacher.", answer:"aren't listening"},
+        {text:"My sister", options:["is making","is makeing"], suffix:"dinner in the kitchen.", answer:"is making"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 2: Be Going To
+   ========================================================= */
+{ id:'t2', num:2, title:"Be Going To",
+  blocks:[
+    {type:'p', html:"We use <strong>be going to + base verb</strong> to talk about the future in two distinct situations: <strong>prior intentions and plans</strong> (decided before speaking), and <strong>predictions based on clear present evidence</strong>."},
+    {type:'reftable', headers:["Use","Situation","Example"], rows:[
+      ["<strong>Prior Plan</strong>","A decision made before now","We <strong>are going to visit</strong> our grandparents in Scotland this summer."],
+      ["<strong>Evidence Now</strong>","You can see or hear that something is about to happen","Look at those dark storm clouds &mdash; it <strong>is going to rain</strong>!"]
+    ]},
+    {type:'bubbles', items:[
+      "I<b>'m going to study</b> medicine at university next year.",
+      "Watch out! That stack of boxes <b>is going to fall</b> over!",
+      "“What <b>are you going to do</b> after work?” “I<b>'m going to cook</b> pasta.”",
+      "She <b>isn't going to accept</b> the job offer; she wants to stay in Leeds."
+    ]},
+    {type:'notes', items:[
+      "<b>Structure of 'Be Going To':</b>",
+      "&bull; Positive: Subject + <b>am / is / are</b> + <b>going to</b> + base verb.",
+      "&bull; Negative: Subject + <b>am not / isn't / aren't</b> + <b>going to</b> + base verb.",
+      "&bull; Question: <b>Am / Is / Are</b> + subject + <b>going to</b> + base verb?",
+      "Do not forget the verb <i>to be</i>: say <i>I <b>am</b> going to buy</i>, never <i>I going to buy</i>."
+    ]},
+     {type:'image', src:"going-to.png", caption:"She is going to ..."
+    },
+    {type:'mistakes',
+      wrong:[
+        "I going to buy a new laptop this weekend.",
+        "Look at those black clouds! It will rain.",
+        "He is going to buys a flat in London.",
+        "They are going visit their friends in Brighton."
+      ],
+      right:[
+        "I am going to buy a new laptop this weekend. (do not omit 'am/is/are')",
+        "Look at those black clouds! It is going to rain. (use 'going to' when there is visible evidence)",
+        "He is going to buy a flat in London. (base verb after 'to'; no -s)",
+        "They are going to visit their friends in Brighton. (do not forget 'to')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t2ex1', tag:'2.1', title:"Complete with be going to + verb", instr:"Write the correct form of be going to and the verb in brackets.",
+      lines:[
+        "Look at that cyclist! He {0|given:is going to crash} (crash) into the hedge!",
+        "We {1} (spend) a two weeks in Scotland this July.",
+        "I {2} (not buy) that coat; it is far too expensive. (not buy)",
+        "Lucy {3} (start) her new training programme on Monday.",
+        "Be careful with that tray! You {4} (drop) the teapot!",
+        "They {5} (sell) their old car next week.",
+        "It {6} (snow) tonight; feel how freezing the air is!",
+        "We {7} (not stay) at a hotel; we have booked a cottage. (not stay)"
+      ],
+      answers:[
+        ["is going to crash","'s going to crash"],
+        ["are going to spend","'re going to spend"],
+        ["am not going to buy","'m not going to buy"],
+        ["is going to start","'s going to start"],
+        ["are going to drop","'re going to drop"],
+        ["are going to sell","'re going to sell"],
+        ["is going to snow","'s going to snow"],
+        ["aren't going to stay","are not going to stay","'re not going to stay"]
+      ]
+    },
+    { type:'choice', id:'t2ex2', tag:'2.2', title:"Choose the correct form", instr:"Select the correct sentence with be going to.",
+      qs:[
+        {text:"Look at those dark grey clouds!", options:["It is going to rain.","It going to rain."], suffix:"", answer:"It is going to rain."},
+        {text:"Next year, our family", options:["is going to move","is going move"], suffix:"to Edinburgh.", answer:"is going to move"},
+        {text:"What", options:["are you going to do","you are going to do"], suffix:"this evening?", answer:"are you going to do"},
+        {text:"Watch out! The baby", options:["is going to spill","going to spill"], suffix:"the glass of milk!", answer:"is going to spill"},
+        {text:"We", options:["aren't going to miss","not going to miss"], suffix:"the beginning of the play.", answer:"aren't going to miss"},
+        {text:"“Are you going to phone Mark?” “Yes,", options:["I am","I'm going","I will do"], suffix:".”", answer:"I am"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 3: He Works in a Bank
+   ========================================================= */
+{ id:'t3', num:3, title:"He Works in a Bank",
+  blocks:[
+    {type:'p', html:"English present simple conjugation is straightforward. The only change is in the <strong>third person singular</strong> (<i>he, she, it</i>), where we add an <strong>-s</strong> or <strong>-es</strong> to the verb."},
+    {type:'terms', items:[
+      "I work in a factory, but John <strong>works</strong> in a bank. (not: John work)",
+      "I live in London. Joanna <strong>lives</strong> in Manchester. (not: Joanna live)",
+      "We watch TV every day. Thomas <strong>watches</strong> TV every day.",
+      "Steve <strong>studies</strong> chemistry. Robert <strong>teaches</strong> maths."
+    ]},
+    {type:'p', html:"These common verbs have irregular third-person forms: <strong>have &rarr; has</strong>, <strong>go &rarr; goes</strong>, and <strong>do &rarr; does</strong>."},
+    {type:'terms', items:[
+      "I have one brother. Anna <strong>has</strong> two sisters.",
+      "The Earth <strong>goes</strong> around the Sun.",
+      "Kacper <strong>goes</strong> to school every day.",
+      "I do my homework every evening. My mum <strong>does</strong> the shopping once a week."
+    ]},
+    {type:'mistakes',
+      wrong:[
+        "My brother work in an architecture firm.",
+        "She have two cats and a dog.",
+        "He watch television every evening.",
+        "My father drive to work every morning."
+      ],
+      right:[
+        "My brother works in an architecture firm. (add -s for he/she/it)",
+        "She has two cats and a dog. ('have' becomes 'has')",
+        "He watches television every evening. (verbs ending in -ch take -es)",
+        "My father drives to work every morning. (add -s for singular subject)"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t3ex1', tag:'3.1', title:"Complete using the third person singular (-s)", instr:"Write the correct present simple form of the verb in brackets.",
+      lines:[
+        "My girlfriend only {0|given:sleeps} (sleep) for 6 hours per night.",
+        "My brother {0} (go) to university. He {1} (study) biology.",
+        "Josephine {2} (have) long blonde hair and blue eyes.",
+        "A toaster is a device that {3} (make) toast.",
+        "A postman is a person who {4} (deliver) mail.",
+        "Coronavirus is a disease that {5} (cause) serious health problems.",
+        "My dad {6} (drive) to work but my mum {7} (take) the train.",
+        "The train {8} (depart) at 7:45 and {9} (arrive) at 8:05.",
+        "My dog {10} (have) long ears and a fluffy tail.",
+        "In the evenings, my mother {11} (do) the laundry, {12} (fold) my clothes and {13} (make) us dinner. My dad {14} (take) the rubbish out."
+      ],
+      answers:[["goes"],["studies"],["has"],["makes"],["delivers"],["causes"],["drives"],["takes"],["departs"],["arrives"],["has"],["does"],["folds"],["makes"],["takes"]]
+    },
+    { type:'choice', id:'t3ex2', tag:'3.2', title:"Choose the correct verb form", instr:"Select the correct third person singular form.",
+      qs:[
+        {text:"Doctor Evans", options:["treats","treat"], suffix:"patients at the local medical centre.", answer:"treats"},
+        {text:"The Earth", options:["revolves","revolve"], suffix:"around the Sun once every 365 days.", answer:"revolves"},
+        {text:"My uncle", options:["has","haves"], suffix:"a lovely holiday cottage in Cornwall.", answer:"has"},
+        {text:"Simon", options:["teaches","teachs"], suffix:"history at the secondary school.", answer:"teaches"},
+        {text:"The department store", options:["closes","close"], suffix:"at eight o'clock in the evening.", answer:"closes"},
+        {text:"Water", options:["boils","boil"], suffix:"at 100 degrees Celsius.", answer:"boils"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 4: Don't / Doesn't
+   ========================================================= */
+{ id:'t4', num:4, title:"Don't / Doesn't",
+  blocks:[
+    {type:'p', html:"In the present simple tense, we make negative sentences using <strong>don't</strong> (<i>do not</i>) or <strong>doesn't</strong> (<i>does not</i>) + the <strong>base form</strong> of the verb."},
+    {type:'reftable', headers:["Subject","Auxiliary","Base Verb","Example"], rows:[
+      ["I / You / We / They","<strong>don't</strong>","work","I <strong>don't work</strong> on Saturdays."],
+      ["He / She / It","<strong>doesn't</strong>","work","He <strong>doesn't work</strong> on Sundays."]
+    ]},
+    {type:'bubbles', items:[
+      "I <b>don't drink</b> coffee in the evening.",
+      "Sarah <b>doesn't live</b> in London; she lives in Edinburgh.",
+      "My parents <b>don't like</b> loud music.",
+      "This bus <b>doesn't stop</b> at the train station."
+    ]},
+    {type:'notes', items:[
+      "<b>Crucial rule:</b>",
+      "After <b>doesn't</b>, the main verb is in the base form &mdash; do <b>not</b> add an <b>-s</b>!",
+      "The <b>-s</b> is already in <i>does</i> (<i>He works &rarr; He doesn't work</i>)."
+    ]},
+    {type:'mistakes',
+      wrong:[
+        "He doesn't works in an office.",
+        "She don't have a driving licence.",
+        "I no like cold weather.",
+        "Tom doesn't has any brothers or sisters."
+      ],
+      right:[
+        "He doesn't work in an office. (no -s after doesn't!)",
+        "She doesn't have a driving licence. (use doesn't for he/she/it)",
+        "I don't like cold weather. (use don't, never 'no')",
+        "Tom doesn't have any brothers or sisters. (base form 'have', not 'has')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t4ex1', tag:'4.1', title:"Complete with don't or doesn't", instr:"Write don't or doesn't to complete each sentence.",
+      lines:[
+        "Mark {0|given:doesn't} eat meat because he is a vegetarian.",
+        "We {1} live near the city centre.",
+        "My sister {2} speak Spanish, but she speaks French.",
+        "Dogs {3} like the sound of thunderstorms.",
+        "It {4} rain very often during the summer months here.",
+        "I {5} know the answer to this question.",
+        "The museum {6} open on bank holidays.",
+        "You {7} need to bring any stationery to class."
+      ],
+      answers:[
+        ["doesn't","does not"],
+        ["don't","do not"],
+        ["doesn't","does not"],
+        ["don't","do not"],
+        ["doesn't","does not"],
+        ["don't","do not"],
+        ["doesn't","does not"],
+        ["don't","do not"]
+      ]
+    },
+    { type:'choice', id:'t4ex2', tag:'4.2', title:"Choose the correct form", instr:"Select the correct negative sentence.",
+      qs:[
+        {text:"Emma", options:["doesn't work","doesn't works"], suffix:"on Wednesdays.", answer:"doesn't work"},
+        {text:"They", options:["don't like","doesn't like"], suffix:"spicy food.", answer:"don't like"},
+        {text:"Harry", options:["doesn't have","doesn't has"], suffix:"a car.", answer:"doesn't have"},
+        {text:"My parents", options:["don't watch","doesn't watch"], suffix:"television late at night.", answer:"don't watch"},
+        {text:"The express train", options:["doesn't stop","doesn't stops"], suffix:"at this village.", answer:"doesn't stop"},
+        {text:"I", options:["don't understand","no understand"], suffix:"this grammar rule.", answer:"don't understand"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 5: There Is / There Are
+   ========================================================= */
+{ id:'t5', num:5, title:"There Is / There Are",
+  blocks:[
+    {type:'p', html:"When we want to say that something exists, we use <strong>there is</strong> or <strong>there are</strong>. <strong>There is</strong> is singular. <strong>There are</strong> refers to plurals. When something doesn't exist, we use the negative: <strong>there isn't</strong> or <strong>there aren't</strong>."},
+    {type:'bubbles', items:[
+      "<b>There is</b> a TV in the room. <b>There are</b> books on the floor.",
+      "<b>There is</b> a piano in the house. <b>There are</b> 88 keys on the piano.",
+      "<b>There isn't</b> a painting on the wall. <b>There aren't</b> any pets in the house."
+    ]},
+    {type:'image', src:"there-are.png", caption:"There is vs. There are"
+    },
+    {type:'mistakes',
+      wrong:[
+        "On the table is a book.",
+        "In the room are two chairs.",
+        "There is many people in the park."
+      ],
+      right:[
+        "There is a book on the table.",
+        "There are two chairs in the room.",
+        "There are many people in the park. ('people' is plural!)"
+      ]
+    },
+    {type:'image', src:"there-is.png", alt:"A living room with an armchair, a sofa, a vase of flowers on a table, picture frames and a clock on the wall, curtains, and books on shelves.",
+      caption:"Illustration by the author."
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t5ex1', tag:'5.1', title:"Complete with there is or there are", instr:"Look at the picture above.",
+      lines:[
+        "{0} an armchair in the corner.",
+        "{1} a vase on the table.",
+        "{2} some flowers in the vase.",
+        "{3} some pictures on the wall.",
+        "{4} a clock on the wall.",
+        "{5} books on the shelves."
+      ],
+      answers:[["there is","there's"],["there is","there's"],["there are"],["there are"],["there is","there's"],["there are"]]
+    },
+    { type:'choice', id:'t5ex2', tag:'5.2', title:"Choose the correct form", instr:"Select there is, there are, there isn't, or there aren't.",
+      qs:[
+        {text:"", options:["There is","There are"], suffix:"twenty-five students in the classroom.", answer:"There are"},
+        {text:"", options:["There is","There are"], suffix:"a good café just around the corner.", answer:"There is"},
+        {text:"Shh!", options:["There is","There are"], suffix:"someone knocking at the front door.", answer:"There is"},
+        {text:"We cannot make an omelette because", options:["there aren't","there isn't"], suffix:"any eggs left.", answer:"there aren't"},
+        {text:"Hurry up,", options:["there isn't","there aren't"], suffix:"much time left before the train departs.", answer:"there isn't"},
+        {text:"", options:["Are there","Is there"], suffix:"any clean glasses in the cupboard?", answer:"Are there"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 6: Like, Love, Hate, Don't Mind + -ing
+   ========================================================= */
+{ id:'t6', num:6, title:"Like, Love, Hate, Don't Mind + -ing",
+  blocks:[
+    {type:'p', html:"When we talk about activities we enjoy or dislike, verbs like <strong>like, love, enjoy, hate, prefer, don't mind</strong>, and <strong>can't stand</strong> are followed by a verb in the <strong>-ing form</strong> (the gerund)."},
+    {type:'reftable', headers:["Feeling","Verb Pattern","Example"], rows:[
+      ["Love (❤️❤️)","love + -ing","I <strong>love swimming</strong> in the sea."],
+      ["Like (👍)","like / enjoy + -ing","She <strong>likes reading</strong> crime novels."],
+      ["Neutral (😐)","don't mind + -ing","I <strong>don't mind doing</strong> the washing-up."],
+      ["Dislike (👎)","dislike / hate + -ing","He <strong>hates getting</strong> up early."],
+      ["Strong dislike (🚫)","can't stand + -ing","They <strong>can't stand waiting</strong> in long queues."]
+    ]},
+    {type:'bubbles', items:[
+      "“Do you <b>enjoy travelling</b> abroad?” “Yes, I <b>love visiting</b> historic cities.”",
+      "I <b>don't mind cooking</b> dinner, but I <b>hate washing</b> the greasy pans!",
+      "Hannah <b>prefers cycling</b> to work rather than taking the crowded tube.",
+      "He <b>can't stand listening</b> to loud music while he is trying to revise."
+    ]},
+    {type:'mistakes',
+      wrong:[
+        "I like cook Italian food.",
+        "She doesn't mind to help us.",
+        "He hates to doing his homework.",
+        "I very like playing tennis."
+      ],
+      right:[
+        "I like cooking Italian food. (use verb-ing after like)",
+        "She doesn't mind helping us. (use verb-ing after don't mind)",
+        "He hates doing his homework. (do not mix 'to' with '-ing')",
+        "I really like playing tennis. (say 'really like', not 'very like')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t6ex1', tag:'6.1', title:"Complete with the -ing form", instr:"Put the verb in brackets into the correct -ing form.",
+      lines:[
+        "My brother loves {0} (play) the guitar in his spare time.",
+        "We don't mind {1} (wait) for a few extra minutes.",
+        "Claire hates {2} (get) up early on cold winter mornings.",
+        "Do you enjoy {3} (cook) for your friends and family?",
+        "I like {4} (read) historical novels before going to sleep.",
+        "Simon can't stand {5} (stand) in long supermarket queues.",
+        "They really love {6} (travel) around Europe every summer.",
+        "I don't mind {7} (walk) to the station when the weather is mild."
+      ],
+      answers:[
+        ["playing"],
+        ["waiting"],
+        ["getting"],
+        ["cooking"],
+        ["reading"],
+        ["standing"],
+        ["travelling","traveling"],
+        ["walking"]
+      ]
+    },
+    { type:'choice', id:'t6ex2', tag:'6.2', title:"Choose the correct form", instr:"Select the correct option to complete each sentence.",
+      qs:[
+        {text:"I really", options:["enjoy watching","enjoy to watch"], suffix:"nature documentaries.", answer:"enjoy watching"},
+        {text:"Jack doesn't", options:["mind helping","mind to help"], suffix:"us move the furniture.", answer:"mind helping"},
+        {text:"Sarah", options:["hates doing","hate doing"], suffix:"the ironing on Sundays.", answer:"hates doing"},
+        {text:"My grandparents", options:["love spending","love spend"], suffix:"time in their garden.", answer:"love spending"},
+        {text:"We", options:["can't stand queueing","can't stand to queueing"], suffix:"at theme parks.", answer:"can't stand queueing"},
+        {text:"Do you", options:["like swimming","like to swimming"], suffix:"in cold water?", answer:"like swimming"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 7: A, An, Some, Any, Much, Many, A Lot Of
+   ========================================================= */
+{ id:'t7', num:7, title:"A, An, Some, Any, Much, Many, A Lot Of",
+  blocks:[
+    {type:'p', html:"Quantifiers and determiners describe quantity. Choosing the correct word depends on whether the noun is <strong>countable</strong> (things we can count: <i>books, apples, cars</i>) or <strong>uncountable</strong> (things we cannot count: <i>water, money, information, advice</i>)."},
+    {type:'reftable', headers:["Word","Countable (Singular)","Countable (Plural)","Uncountable","Typical Usage"], rows:[
+      ["<strong>A / An</strong>","✓ <i>a pen, an apple</i>","✗","✗","Singular items (a before consonant sound, an before vowel sound)"],
+      ["<strong>Some</strong>","✗","✓ <i>some pens</i>","✓ <i>some milk</i>","Positive sentences & polite offers/requests"],
+      ["<strong>Any</strong>","✗","✓ <i>any pens</i>","✓ <i>any milk</i>","Negative sentences & open questions"],
+      ["<strong>Much</strong>","✗","✗","✓ <i>much water</i>","Negative sentences & questions with uncountable nouns"],
+      ["<strong>Many</strong>","✗","✓ <i>many books</i>","✗","Negative sentences & questions with plural countable nouns"],
+      ["<strong>A lot of</strong>","✗","✓ <i>a lot of people</i>","✓ <i>a lot of time</i>","Positive sentences with both countable & uncountable"]
+    ]},
+    {type:'bubbles', items:[
+      "I need <b>a</b> notebook and <b>an</b> eraser for my lesson.",
+      "There is <b>some</b> cheese in the fridge, but there isn't <b>any</b> butter.",
+      "“Would you like <b>some</b> tea?” (polite offer &mdash; we use some!)",
+      "How <b>many</b> languages do you speak? How <b>much</b> homework do you have?"
+    ]},
+     {type:'image', src:"much-many.png", caption:"Much vs. Many vs. A lot of"
+    },
+    {type:'mistakes',
+      wrong:[
+        "How many money do you have in your wallet?",
+        "I don't have some pens in my pencil case.",
+        "There is many traffic on the motorway today.",
+        "She has an university degree.",
+        "I bought a bread and a milk at the supermarket."
+      ],
+      right:[
+        "How much money do you have in your wallet? ('money' is uncountable)",
+        "I don't have any pens in my pencil case. (use 'any' in negative sentences)",
+        "There is a lot of traffic on the motorway today. ('traffic' is uncountable)",
+        "She has a university degree. ('university' begins with a /j/ consonant sound)",
+        "I bought some bread and some milk at the supermarket. ('bread' & 'milk' are uncountable)"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t7ex1', tag:'7.1', title:"Complete with a, an, some, or any", instr:"Fill in each blank with a, an, some, or any.",
+      lines:[
+        "Would you like {0} cup of hot tea?",
+        "We don't have {1} fresh milk left in the fridge.",
+        "He bought {2} apple and two bananas from the fruit stall.",
+        "There are {3} lovely flowers blooming in the park.",
+        "Have you got {4} questions about the grammar rules?",
+        "Could I please have {5} more water? (polite request)",
+        "It takes {6} hour to travel to the airport by train.",
+        "I looked around, but I couldn't see {7} vacant seats."
+      ],
+      answers:[
+        ["a"],
+        ["any"],
+        ["an"],
+        ["some"],
+        ["any"],
+        ["some"],
+        ["an"],
+        ["any"]
+      ]
+    },
+    { type:'choice', id:'t7ex2', tag:'7.2', title:"Choose much, many, or a lot of", instr:"Select the correct quantifier.",
+      qs:[
+        {text:"How", options:["many","much"], suffix:"people attended the open day?", answer:"many"},
+        {text:"There isn't", options:["much","many"], suffix:"petrol remaining in the tank.", answer:"much"},
+        {text:"London attracts", options:["a lot of","much"], suffix:"tourists from all over the world.", answer:"a lot of"},
+        {text:"How", options:["many","much"], suffix:"cups of coffee do you drink each day?", answer:"many"},
+        {text:"The police didn't have", options:["much","many"], suffix:"information about the accident.", answer:"much"},
+        {text:"We didn't spend", options:["much","many"], suffix:"money during our trip.", answer:"much"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 8: Can / Can't
+   ========================================================= */
+{ id:'t8', num:8, title:"Can / Can't",
+  blocks:[
+    {type:'p', html:"<strong>Can</strong> is a modal auxiliary verb used to express <strong>ability</strong> (being able to do something), <strong>possibility</strong>, or to ask for and give <strong>permission</strong>."},
+    {type:'reftable', headers:["Form","Structure","Example"], rows:[
+      ["Positive (+)","Subject + <strong>can</strong> + base verb","She <strong>can play</strong> the violin beautifully."],
+      ["Negative (-)","Subject + <strong>can't</strong> (cannot) + base verb","I <strong>can't swim</strong> very well."],
+      ["Question (?)","<strong>Can</strong> + subject + base verb?","<strong>Can you speak</strong> Italian? &mdash; Yes, I <strong>can</strong>."]
+    ]},
+    {type:'bubbles', items:[
+      "David <b>can speak</b> four languages fluently.",
+      "I'm sorry, I <b>can't hear</b> you &mdash; the connection is poor.",
+      "“<b>Can I borrow</b> your pen for a moment?” “Yes, of course you <b>can</b>.”",
+      "Penguins <b>can't fly</b>, but they <b>can swim</b> remarkably fast."
+    ]},
+    {type:'notes', items:[
+      "<b>Three Golden Rules for 'Can':</b>",
+      "1. <b>Never add -s</b>: It is always <i>he can</i>, never <i>he cans</i>.",
+      "2. <b>Never use 'to'</b>: Always follow with the bare infinitive (<i>can play</i>, not <i>can to play</i>).",
+      "3. <b>Negative is 'cannot' or 'can't'</b>: Never use <i>don't can</i> or <i>doesn't can</i>."
+    ]},
+    {type:'image', src:"can.png", caption:"The verbs Can and Could"
+    },
+    {type:'mistakes',
+      wrong:[
+        "He can speaks three foreign languages.",
+        "She can to drive a manual car.",
+        "Do you can come to my party on Friday?",
+        "I don't can find my house keys anywhere."
+      ],
+      right:[
+        "He can speak three foreign languages. (never add -s after can)",
+        "She can drive a manual car. (bare infinitive: no 'to')",
+        "Can you come to my party on Friday? (invert subject and can; no 'do')",
+        "I can't find my house keys anywhere. (use can't, never 'don't can')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t8ex1', tag:'8.1', title:"Complete with can or can't + verb", instr:"Write can or can't plus the verb in brackets.",
+      lines:[
+        "She is an accomplished musician; she {0} (play) three instruments.",
+        "I am afraid I {1} (come) to the dinner tonight because I am unwell.",
+        "{2} you {3} (hear) the music from next door?",
+        "The sign says we {4} (park) here; it is strictly prohibited.",
+        "Cheetahs {5} (run) at over 100 kilometres per hour.",
+        "I {6} (find) my glasses; have you seen them?",
+        "He {7} (cook) very well; all his dishes taste wonderful.",
+        "Excuse me, {8} you {9} (tell) me the way to the station?"
+      ],
+      answers:[
+        ["can play"],
+        ["can't come","cannot come"],
+        ["can"],
+        ["hear"],
+        ["can't park","cannot park"],
+        ["can run"],
+        ["can't find","cannot find"],
+        ["can cook"],
+        ["can"],
+        ["tell"]
+      ]
+    },
+    { type:'choice', id:'t8ex2', tag:'8.2', title:"Choose the correct form", instr:"Select the grammatically correct sentence.",
+      qs:[
+        {text:"My sister", options:["can swim","can swims","can to swim"], suffix:"faster than anyone in our class.", answer:"can swim"},
+        {text:"", options:["Can you help","Do you can help","Are you can help"], suffix:"me carry these heavy parcels?", answer:"Can you help"},
+        {text:"I", options:["can't see","don't can see"], suffix:"the board clearly without my glasses.", answer:"can't see"},
+        {text:"Thomas", options:["can drive","can drives"], suffix:"a tractor.", answer:"can drive"},
+        {text:"“Can your brother speak Polish?” “Yes,", options:["he can","he can speaks","he does"], suffix: ".”", answer:"he can"},
+        {text:"You", options:["can leave","can to leave"], suffix:"your coat on the rack over there.", answer:"can leave"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 9: Must / Mustn't
+   ========================================================= */
+{ id:'t9', num:9, title:"Must / Mustn't",
+  blocks:[
+    {type:'p', html:"<strong>Must</strong> is a modal verb used to express strong obligation, duty, or necessity (*I must study for the exam*). <strong>Mustn't</strong> (<i>must not</i>) expresses <strong>prohibition</strong> &mdash; something is against the rules, illegal, or forbidden."},
+    {type:'reftable', headers:["Modal","Meaning","Example"], rows:[
+      ["<strong>Must</strong>","Obligation / Necessity (It is necessary)","You <strong>must wear</strong> a seatbelt in the car."],
+      ["<strong>Mustn't</strong>","Prohibition (Do NOT do it!)","You <strong>mustn't use</strong> your mobile phone while driving."],
+      ["<strong>Don't have to</strong>","No obligation (It is optional)","Tomorrow is Sunday; you <strong>don't have to get up</strong> early."]
+    ]},
+    {type:'bubbles', items:[
+      "Passengers <b>must show</b> their passports at border control.",
+      "You <b>mustn't touch</b> that electrical cable &mdash; it is live and dangerous!",
+      "I <b>must remember</b> to send grandma a birthday card today.",
+      "“You <b>mustn't tell</b> anyone our secret!” “Don't worry, I won't.”"
+    ]},
+    {type:'notes', items:[
+      "<b>Crucial distinction:</b>",
+      "&bull; <b>Mustn't</b> = Strictly forbidden! (You are not allowed to do it)",
+      "&bull; <b>Don't have to</b> = Not necessary, but you can if you wish (Optional)",
+      "Like all modals, <b>must</b> is followed by the bare infinitive: <i>must go</i> (never <i>must to go</i>)."
+    ]},
+    {type:'image', src:"must.png", caption:"She mustn't touch the pictures"
+    },
+    {type:'mistakes',
+      wrong:[
+        "You must to show your boarding pass at the gate.",
+        "He musts finish the assignment before 5 p.m.",
+        "You mustn't come to the party if you are feeling tired.",
+        "You don't must park your car on the double yellow lines."
+      ],
+      right:[
+        "You must show your boarding pass at the gate. (bare infinitive: no 'to')",
+        "He must finish the assignment before 5 p.m. (never add -s to must)",
+        "You don't have to come to the party if you are feeling tired. (it is optional, not forbidden)",
+        "You mustn't park your car on the double yellow lines. (prohibition: use mustn't)"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t9ex1', tag:'9.1', title:"Complete with must or mustn't", instr:"Write must or mustn't in each blank.",
+      lines:[
+        "You {0} drive through a red traffic light; it is illegal.",
+        "Passengers {1} fasten their seatbelts during take-off and landing.",
+        "You {2} eat food inside the university library; only bottled water is permitted.",
+        "I {3} remember to post this important letter before the post office closes.",
+        "You {4} leave small children unattended near a swimming pool.",
+        "Cyclists {5} ride on the pedestrian pavement here; use the cycle lane.",
+        "We {6} finish this project proposal before Friday's deadline.",
+        "You {7} touch the museum exhibits; they are extremely fragile."
+      ],
+      answers:[
+        ["mustn't","must not"],
+        ["must"],
+        ["mustn't","must not"],
+        ["must"],
+        ["mustn't","must not"],
+        ["mustn't","must not"],
+        ["must"],
+        ["mustn't","must not"]
+      ]
+    },
+    { type:'choice', id:'t9ex2', tag:'9.2', title:"Choose must, mustn't, or don't have to", instr:"Select the correct modal expression.",
+      qs:[
+        {text:"You", options:["don't have to","mustn't"], suffix:"pay to visit the British Museum; admission is free.", answer:"don't have to"},
+        {text:"Visitors", options:["mustn't","must"], suffix:"smoke inside the hospital; it is strictly prohibited.", answer:"mustn't"},
+        {text:"All workers", options:["must wear","must to wear"], suffix:"protective goggles in the workshop.", answer:"must wear"},
+        {text:"This is a confidential file; you", options:["mustn't share","don't have to share"], suffix:"it with anyone.", answer:"mustn't share"},
+        {text:"Tomorrow is a bank holiday, so we", options:["don't have to get up","mustn't get up"], suffix:"early.", answer:"don't have to get up"},
+        {text:"You", options:["mustn't feed","don't have to feed"], suffix:"the animals at the zoo; it makes them ill.", answer:"mustn't feed"}
+      ]
+    }
+  ]
+}
+
+];
+
+function renderApp(){
+  const contentsGrid = document.getElementById('contents-grid');
+  const root = document.getElementById('topics-root');
+  const n = TOPICS.length;
+
+  TOPICS.forEach((t,i)=>{
+    const card = document.createElement('a');
+    card.className='contents-card'; card.href='#'+t.id;
+    card.innerHTML = '<span class="contents-num">'+t.num+'</span><span class="contents-text">'+t.title+'</span>';
+    contentsGrid.appendChild(card);
+
+    const pagerWrap = document.createElement('div'); pagerWrap.className='wrap';
+    const prev = TOPICS[i-1], next = TOPICS[i+1];
+    pagerWrap.innerHTML = '<div class="topic-pager">' +
+      (prev ? '<a href="#'+prev.id+'">← '+prev.title+'</a>' : '<span class="disabled">← Previous</span>') +
+      '<span class="count">'+t.num+' / '+n+' &middot; <a href="#top">Contents</a></span>' +
+      (next ? '<a href="#'+next.id+'">'+next.title+' →</a>' : '<span class="disabled">Next →</span>') +
+      '</div>';
+    root.appendChild(pagerWrap);
+
+    const hero = document.createElement('div'); hero.className='unit-hero'; hero.id=t.id;
+    hero.innerHTML = '<div class="unit-hero-inner"><div class="unit-badge">'+t.num+'</div><div><p class="kicker">Unit #'+t.num+'</p><h1>'+t.title+'</h1></div></div>';
+    root.appendChild(hero);
+
+    const bodyWrap = document.createElement('div'); bodyWrap.className='wrap';
+    let html = '';
+    t.blocks.forEach(b=>{
+      if(b.type==='p') html += '<p class="lede">'+b.html+'</p>';
+      else if(b.type==='terms') html += '<ul class="term-list">'+b.items.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+      else if(b.type==='notes') html += '<div class="notes-box">'+b.items.map(x=>'<div>'+x+'</div>').join('')+'</div>';
+      else if(b.type==='bubbles') html += '<div class="bubble-field">'+b.items.map(x=>'<div class="bubble">'+x+'</div>').join('')+'</div>';
+      else if(b.type==='mistakes') html += '<div class="mistake-pair"><div class="mistake-col wrong"><h5>Common mistake</h5>'+b.wrong.map(x=>'<div>'+x+'</div>').join('')+'</div><div class="mistake-col right"><h5>Correct</h5>'+b.right.map(x=>'<div>'+x+'</div>').join('')+'</div></div>';
+      else if(b.type==='meme') html += '<div class="meme-placeholder"><span class="icon">🖼️</span><span class="caption">'+b.caption+'</span></div>';
+      else if(b.type==='illustration') html += '<figure class="illustration-card">'+b.svg+'<figcaption>'+b.caption+'</figcaption></figure>';
+      else if(b.type==='image') html += '<figure class="illustration-card"><img src="'+b.src+'" alt="'+b.alt+'" loading="lazy"><figcaption>'+b.caption+'</figcaption></figure>';
+      else if(b.type==='reftable') html += '<div style="overflow-x:auto"><table class="ref-table"><thead><tr>'+b.headers.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+b.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+    });
+    bodyWrap.innerHTML = html;
+
+    t.exercises.forEach(ex=>{
+      const exDiv = document.createElement('div'); exDiv.className='exercise'; exDiv.id=ex.id;
+      let controls = '';
+      if(ex.type==='cloze'){
+        controls = '<button class="btn" onclick="checkExercise(\''+ex.id+'\')">Check answers</button> <button class="btn secondary" onclick="revealExercise(\''+ex.id+'\')">Reveal answers</button> <button class="btn secondary" onclick="resetExercise(\''+ex.id+'\')">Reset</button> <span class="score" id="'+ex.id+'-score"></span>';
+        exDiv.innerHTML = '<h3><span class="exercise-num">'+ex.tag+'</span>'+ex.title+'</h3><p class="instructions">'+ex.instr+'</p>' + (ex.bank ? '<div class="word-bank" id="'+ex.id+'-bank"></div>' : '') + '<ul class="cloze-list" id="'+ex.id+'-list"></ul><div class="exercise-controls">'+controls+'</div>';
+      } else if(ex.type==='match'){
+        controls = '<button class="btn secondary" onclick="resetMatch(\''+ex.id+'\')">Reset</button> <span class="score" id="'+ex.id+'-score"></span>';
+        exDiv.innerHTML = '<h3><span class="exercise-num">'+ex.tag+'</span>'+ex.title+'</h3><p class="instructions">'+ex.instr+'</p><div class="match-grid"><div class="match-col"><h4>'+ex.leftLabel+'</h4><div id="'+ex.id+'-left"></div></div><div class="match-col"><h4>'+ex.rightLabel+'</h4><div id="'+ex.id+'-right"></div></div></div><div class="exercise-controls">'+controls+'</div>';
+      } else if(ex.type==='choice'){
+        controls = '<button class="btn" onclick="checkChoice(\''+ex.id+'\')">Check answers</button> <button class="btn secondary" onclick="revealChoice(\''+ex.id+'\')">Reveal answers</button> <button class="btn secondary" onclick="resetChoice(\''+ex.id+'\')">Reset</button> <span class="score" id="'+ex.id+'-score"></span>';
+        exDiv.innerHTML = '<h3><span class="exercise-num">'+ex.tag+'</span>'+ex.title+'</h3><p class="instructions">'+ex.instr+'</p><ul class="choice-list" id="'+ex.id+'-list"></ul><div class="exercise-controls">'+controls+'</div>';
+      }
+      bodyWrap.appendChild(exDiv);
+    });
+
+    root.appendChild(bodyWrap);
+  });
+
+  TOPICS.forEach(t=>{
+    t.exercises.forEach(ex=>{
+      if(ex.type==='cloze'){
+        EX[ex.id] = ex.answers;
+        if(ex.bank) buildBank(ex.id, ex.id+'-bank', ex.bank);
+        buildTokenCloze(ex.id, ex.id+'-list', ex.lines);
+      } else if(ex.type==='match'){
+        renderMatch(ex.id, ex.pairs);
+      } else if(ex.type==='choice'){
+        renderChoice(ex.id, ex.qs);
+      }
+    });
+  });
+}
+renderApp();
+if(window.location.hash){
+  const target = document.getElementById(window.location.hash.slice(1));
+  if(target) target.scrollIntoView({behavior:'instant', block:'start'});
+}
+</script>
+
+</body></html>
