@@ -209,6 +209,23 @@
   .illustration-card img{ width:100%; height:auto; display:block; border-radius:6px; }
   .illustration-card figcaption{ margin-top:10px; font-size:.82rem; color:var(--ink-faint); font-style:italic; text-align:center; }
 
+  /* Reading card */
+  .reading-card{
+    margin:22px 0; padding:24px 26px;
+    background:var(--panel); border:1.5px solid var(--line-strong);
+    border-left:5px solid var(--red-fill); border-radius:10px;
+  }
+  .reading-card h4{
+    margin:0 0 14px; font-family:"Poppins",sans-serif;
+    font-size:1.18rem; color:var(--red-fill); font-weight:700;
+  }
+  .reading-card .reading-text{
+    font-size:1.02rem; line-height:1.8; color:var(--ink);
+  }
+  .reading-card .reading-text strong{
+    color:var(--red-mid); font-weight:700;
+  }
+
   /* Exercises */
   .exercise{ margin-top:28px; padding:22px 22px 20px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
   .exercise-num{
@@ -297,7 +314,7 @@
   <div class="top-masthead-inner">
     <p class="kicker">Interactive workbook for Roch</p>
     <h1>Unit 1 Interactive Workbook</h1>
-    <p class="progress-note">9 interactive grammar units &mdash; explanations, common mistakes, and practice.</p>
+    <p class="progress-note">11 interactive units &mdash; grammar, vocabulary, reading, and practice.</p>
   </div>
 </div>
 
@@ -313,7 +330,7 @@
 <div class="wrap">
   <div class="closing-note">
     <h3>Keep Practising!</h3>
-    <p>9 essential units completed &mdash; review your answers, master the rules, and check back for more units soon.</p>
+    <p>11 essential units completed &mdash; review your answers, master the rules, and check back for more units soon.</p>
   </div>
   <footer>
     Original explanations, examples, and exercises by the author. Diagrams on this page are original illustrations, redrawn for this workbook.
@@ -1128,6 +1145,223 @@ const TOPICS = [
       ]
     }
   ]
+},
+
+/* =========================================================
+   Unit 10: Banking – A Difficult Month
+   ========================================================= */
+{ id:'t10', num:10, title:"Banking",
+  blocks:[
+    {type:'p', html:"Managing personal finances and visiting a bank in English requires practical vocabulary, collocations, and prepositions. The passage below describes a challenging month dealing with accounts, payments, and unexpected charges."},
+{
+  type: 'reading',
+  title: "Banking – A Difficult Month",
+  html: `
+    Last month, I had a <strong>slight problem</strong> with my <strong>bank account</strong>. I was <strong>short of money</strong> because I had <strong>spent a fortune</strong> on shopping and several unexpected expenses. I decided to visit my bank to open a <strong>savings account</strong> and discuss my <strong>debts</strong>.
+
+    <p>Unfortunately, I discovered that my <strong>debit card</strong> had been <strong>declined</strong> when I tried to <strong>pay by card</strong> at a supermarket. I checked my bank account using an <strong>ATM</strong> and realised that I had <strong>run out of money</strong>. I needed to <strong>withdraw cash</strong>, but the <strong>cashpoint</strong> charged me an additional fee for the <strong>cash withdrawal</strong>.</p>
+
+    <p>I decided to <strong>pay in cash</strong> instead, although I usually <strong>make payments electronically</strong> or <strong>by bank transfer</strong>. Later, I entered my <strong>PIN</strong> and <strong>transferred</strong> some money from another account. The <strong>exchange rate</strong> was quite favourable, so I <strong>exchanged</strong> some euros for pounds.</p>
+
+    <p>I also checked my <strong>bank statement</strong> and noticed an unfamiliar <strong>transaction</strong>. I contacted the bank, explained the situation and asked for a <strong>refund</strong>. Fortunately, the bank agreed that there had been a <strong>slight problem</strong> and returned the money.</p>
+
+    <p>I received a <strong>receipt</strong> confirming the transaction, and the customer service representative explained that I should always <strong>check my change</strong>, keep my <strong>bank card</strong> safe and <strong>be careful with money</strong>.</p>
+
+    <p>By the end of the month, I had managed to <strong>pay my bills</strong>, <strong>reduce my debts</strong> and avoid <strong>being in the red</strong>. I realised that <strong>managing a bank account</strong> properly is important if you want to <strong>save money</strong> and avoid unnecessary charges.</p>
+  `
+},    {type:'reftable', headers:["Banking Expression","Meaning","Example"], rows:[
+      ["<strong>bank account</strong>","An arrangement with a bank to hold and manage your money","I checked my <strong>bank account</strong> this morning."],
+      ["<strong>savings account</strong>","An account where you save money that earns interest","Put 10% of your earnings into a <strong>savings account</strong>."],
+      ["<strong>debit card</strong>","A card that deducts money directly from your current account","I paid for my groceries with a <strong>debit card</strong>."],
+      ["<strong>declined</strong>","Rejected or refused by the bank or payment terminal","My card was <strong>declined</strong> because of insufficient funds."],
+      ["<strong>withdraw cash</strong> / <strong>withdrawal</strong>","To take physical banknotes out of a cashpoint or bank","You can <strong>withdraw cash</strong> without fees at this cashpoint."],
+      ["<strong>in the red</strong>","Having a negative balance or owing money on overdraft","Avoid being <strong>in the red</strong> to escape high bank fees."],
+      ["<strong>bank statement</strong>","A document recording all transactions into and out of an account","Check your monthly <strong>bank statement</strong> for errors."],
+      ["<strong>exchange rate</strong>","The rate at which one currency can be converted to another","The euro-pound <strong>exchange rate</strong> was favourable."],
+      ["<strong>bank transfer</strong>","Sending money electronically from one account to another","He paid the deposit via electronic <strong>bank transfer</strong>."]
+    ]},
+
+    {type:'mistakes',
+      wrong:[
+        "Can I pay with card?",
+        "I will pay by cash.",
+        "Can you borrow me £20 until tomorrow?",
+        "His bank account is on the red.",
+        "We have completely run out from money.",
+        "The machine charged me for cash taking."
+      ],
+      right:[
+        "Can I pay by card? (say 'by card', never 'with card')",
+        "I will pay in cash. (say 'in cash', never 'by cash')",
+        "Can you lend me £20 until tomorrow? (the other person 'lends', you 'borrow')",
+        "His bank account is in the red. (the idiom is 'in the red', meaning overdrawn)",
+        "We have run out of money. (the collocation is 'run out of money')",
+        "The machine charged me for the cash withdrawal. (use the noun 'withdrawal')"
+      ]
+    }
+  ],
+  exercises:[
+{ type:'choice', id:'t10ex3', tag:'10.1', title:"Reading comprehension: A Difficult Month", instr:"Select the correct answer based on the reading passage.",
+      qs:[
+        {text:"Why was the writer short of money at the start of the month?", options:[,"He lost his wallet while travelling on the bus", "He spent a fortune on shopping and unexpected expenses"], suffix:"", answer:"He spent a fortune on shopping and unexpected expenses"},
+        {text:"What occurred when the writer attempted to pay at the supermarket?", options:["His debit card was declined","The supermarket card machine was broken"], suffix:"", answer:"His debit card was declined"},
+        {text:"Why did the cashpoint charge an extra fee?", options:["For printing a balance receipt", "For the cash withdrawal"], suffix:"", answer:"For the cash withdrawal"},
+        {text:"Why did the writer decide to exchange euros for pounds?", options:["He was planning an overseas business trip", "The exchange rate was quite favourable"], suffix:"", answer:"The exchange rate was quite favourable"},
+        {text:"How did the bank resolve the unfamiliar transaction on the statement?", options:["They agreed there was an error and issued a refund","They refused to return the money"], suffix:"", answer:"They agreed there was an error and issued a refund"},
+        {text:"What practical advice did the customer service representative offer?", options:["To check change, keep the card safe, and be careful with money","To avoid bank accounts and keep cash at home"], suffix:"", answer:"To check change, keep the card safe, and be careful with money"}
+      ]
+    },
+
+    { type:'match', id:'t10ex1', tag:'10.2', title:"Match the banking terms to their definitions", instr:"Click a banking term on the left, then click its corresponding definition on the right.",
+      leftLabel:"Banking Term", rightLabel:"Definition",
+      pairs:[
+        {desc:"Debit card", key:"debit", label:"A plastic card that deducts money directly from your current account"},
+        {desc:"Withdraw cash", key:"withdraw", label:"To take physical banknotes out of a cash machine or branch"},
+        {desc:"In the red", key:"red", label:"Having a negative account balance and owing money to the bank"},
+        {desc:"Bank statement", key:"statement", label:"An official document showing all incoming and outgoing transactions"},
+        {desc:"Refund", key:"refund", label:"Money returned to you after an incorrect charge or returned purchase"},
+        {desc:"Exchange rate", key:"exchange", label:"The value of one currency when converted into another"},
+        {desc:"PIN", key:"pin", label:"A secret 4-digit code used to authorise card transactions"},
+        {desc:"Savings account", key:"savings", label:"An account designed to hold money for the future while earning interest"}
+      ]
+    },
+    { type:'cloze', id:'t10ex2', tag:'10.3', title:"Complete the banking sentences", instr:"Fill in each blank with the correct banking word or preposition from the box.",
+      bank:["by","in","of","declined","withdraw","refund","transfer","exchange","receipt"],
+      lines:[
+        "I couldn't buy dinner because I was completely short {0} money.",
+        "Would you like to pay {1} card or pay {2} cash?",
+        "The transaction could not proceed because my debit card was {3}.",
+        "I went to the nearest cashpoint to {4} some cash for the weekend.",
+        "After paying those unexpected bills, his account went £200 {5} the red.",
+        "The cashier handed me a printed {6} confirming the payment.",
+        "She transferred £50 to her sister via online bank {7}.",
+        "The currency {8} rate was very favourable, so I bought some British pounds."
+      ],
+      answers:[
+        ["of"],
+        ["by"],
+        ["in"],
+        ["declined"],
+        ["withdraw"],
+        ["in"],
+        ["receipt"],
+        ["transfer"],
+        ["exchange"]
+      ]
+    },
+    
+    { type:'choice', id:'t10ex4', tag:'10.4', title:"Choose the correct banking expression", instr:"Select the grammatically correct banking phrase to avoid common errors.",
+      qs:[
+        {text:"Could I please pay", options:["by card","with card"], suffix:"for these groceries?", answer:"by card"},
+        {text:"I don't have my wallet, but I can pay", options:["by cash", "in cash"], suffix:"if you have change.", answer:"in cash"},
+        {text:"We cannot buy any tickets because we have completely run", options:["out from money","out of money"], suffix:".", answer:"out of money"},
+        {text:"He spent more than he earned, so his bank account is now", options:["in the red","on the red"], suffix:".", answer:"in the red"},
+        {text:"Could you please", options:["borrow me","lend me"], suffix:"twenty pounds until payday?", answer:"lend me"},
+        {text:"The independent cashpoint charged an extra fee for the cash", options:["withdrawal","withdraw"], suffix:".", answer:"withdrawal"}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 11: Shopping – Finding the Best Deals
+   ========================================================= */
+{ id:'t11', num:11, title:"Shopping",
+  blocks:[
+    {type:'p', html:"Shopping in English involves essential vocabulary for browsing high-street shops, comparing discounts, trying on clothes, and making sensible consumer decisions. Read the passage below about finding bargains and shopping smartly."},
+    {type:'reading', title:"Shopping – Finding the Best Deals", html:"<p>Last Saturday, I went shopping because I needed a new pair of trainers and some clothes. I decided to compare prices online before visiting the shops. I wanted to find a real <strong>bargain</strong> rather than <strong>pay full price</strong>. One website was offering a 30% <strong>discount</strong>, while another had a special <strong>offer</strong> with free delivery. I also checked whether I could use a <strong>voucher</strong> or <strong>discount code</strong> to save even more money.</p><p>When I arrived at the shopping centre, I noticed that several shops were having a <strong>sale</strong>. Some items were <strong>reduced</strong>, but I wasn't sure whether they were actually good value for money. I found a jacket with a large <strong>price tag</strong> showing the original price and the new sale price. Although it looked attractive, I decided to check the quality before making a purchase. I didn't want to buy something just because it was cheap.</p><p>In one shop, I tried on a few items in the <strong>changing room</strong> and asked a shop assistant whether they had a different size. Unfortunately, the trainers I wanted were out of stock. The assistant suggested ordering them online, where I could choose home <strong>delivery</strong> or <strong>click and collect</strong>. I decided to place an order and pay by card.</p><p>Before buying anything else, I thought carefully about my <strong>consumer choices</strong>. I try to avoid <strong>impulse buying</strong> and only purchase things I really need. I always check the <strong>reviews</strong>, compare different <strong>brands</strong> and consider whether a product is worth the money. I also keep the <strong>receipt</strong> in case I need to <strong>return</strong> or <strong>exchange</strong> an item. In the end, I bought a few things at a reasonable price and felt that I had made a sensible shopping decision.</p>"},
+    {type:'reftable', headers:["Shopping Term / Phrase","Meaning","Example"], rows:[
+      ["<strong>bargain</strong>","Something bought for a remarkably low price / excellent value","At just £15, this wool coat was an absolute <strong>bargain</strong>."],
+      ["<strong>discount / discount code</strong>","A deduction from the regular price of an item","Students get a 10% <strong>discount</strong> with valid ID."],
+      ["<strong>sale / on sale</strong>","A period when items are sold at reduced prices","The department store is having a <strong>sale</strong> this weekend."],
+      ["<strong>price tag</strong>","A label showing the price of an item","Check the <strong>price tag</strong> to see if it is reduced."],
+      ["<strong>changing room</strong>","A private cubicle in a clothing shop where you try garments on","Where are the <strong>changing rooms</strong>, please?"],
+      ["<strong>out of stock</strong>","Currently unavailable because all items have been sold","I'm sorry, those running shoes are <strong>out of stock</strong>."],
+      ["<strong>click and collect</strong>","Buying goods online and collecting them from a local store","I chose <strong>click and collect</strong> so I didn't pay for delivery."],
+      ["<strong>impulse buying</strong>","Purchasing items suddenly without planning or necessity","Making a shopping list prevents <strong>impulse buying</strong>."],
+      ["<strong>receipt</strong>","A printed or digital slip proving purchase","Always keep your <strong>receipt</strong> in case you want a refund."],
+      ["<strong>return / exchange</strong>","Taking an item back for a refund or swapping for another size","You have 30 days to <strong>return or exchange</strong> items."]
+    ]},
+
+    {type:'mistakes',
+      wrong:[
+        "I tried the trousers on in the dress room.",
+        "Please give me the recipe for this coat.",
+        "This jacket doesn't suit me; it is too small.",
+        "The shoes are completely out of store.",
+        "The boutique is in sale this week.",
+        "I did some impulse shopping and bought five hats."
+      ],
+      right:[
+        "I tried the trousers on in the changing room. (use 'changing room' or 'fitting room')",
+        "Please give me the receipt for this coat. ('receipt' = proof of purchase; 'recipe' = cooking instructions)",
+        "This jacket doesn't fit me; it is too small. ('fit' refers to size; 'suit' refers to style/looks)",
+        "The shoes are completely out of stock. (the expression is 'out of stock')",
+        "The boutique is having a sale this week. (say 'having a sale' or 'items are on sale')",
+        "I did some impulse buying and bought five hats. (the phrase is 'impulse buying')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'choice', id:'t11ex3', tag:'11.1', title:"Reading comprehension: Finding the Best Deals", instr:"Select the correct answer based on the reading passage.",
+      qs:[
+        {text:"Why did the writer compare prices online before visiting the shops?", options:["To find a real bargain rather than pay full price","Because all the high-street shops were closed"], suffix:"", answer:"To find a real bargain rather than pay full price"},
+        {text:"What did the writer check before buying the reduced jacket?", options:["Whether the shop offered free alterations","The quality of the jacket"], suffix:"", answer:"The quality of the jacket"},
+        {text:"Why couldn't the writer buy the trainers in the shop?", options:["The shop only accepted cash payments","They were out of stock in his size"], suffix:"", answer:"They were out of stock in his size"},
+        {text:"What solution did the shop assistant suggest for the trainers?", options:["Ordering them online for delivery or click and collect","Visiting a rival shop across town"], suffix:"", answer:"Ordering them online for delivery or click and collect"},
+        {text:"How does the writer avoid impulse buying?", options:["By never shopping online","By checking reviews, comparing brands, and only buying what is needed"], suffix:"", answer:"By checking reviews, comparing brands, and only buying what is needed"},
+        {text:"Why does the writer always keep the receipt?", options:["In case an item needs to be returned or exchanged","To show friends how much money was spent"], suffix:"", answer:"In case an item needs to be returned or exchanged"}
+      ]
+    },
+    { type:'match', id:'t11ex1', tag:'11.2', title:"Match the shopping terms to their definitions", instr:"Click a shopping term on the left, then click its corresponding definition on the right.",
+      leftLabel:"Shopping Term", rightLabel:"Definition",
+      pairs:[
+        {desc:"Bargain", key:"bargain", label:"Something bought at a very good price, much cheaper than usual"},
+        {desc:"Price tag", key:"tag", label:"A label attached to an item showing how much it costs"},
+        {desc:"Changing room", key:"changing", label:"A private cubicle in a clothing shop where you try garments on"},
+        {desc:"Out of stock", key:"stock", label:"Not currently available in the shop because all copies have been sold"},
+        {desc:"Click and collect", key:"click", label:"A service where you order goods online and pick them up at the shop"},
+        {desc:"Impulse buying", key:"impulse", label:"Purchasing products on a sudden whim without prior planning"},
+        {desc:"Receipt", key:"receipt", label:"A printed slip confirming that an item has been purchased and paid for"},
+        {desc:"Discount code", key:"code", label:"A series of letters or numbers entered online to receive a price reduction"}
+      ]
+    },
+    { type:'cloze', id:'t11ex2', tag:'11.3', title:"Complete the shopping sentences", instr:"Fill in each blank with the correct shopping word from the box.",
+      bank:["exchange","impulse","reduced","changing","stock","bargain","discount","collect","receipt"],
+      lines:[
+        "At only ten pounds, this winter scarf was an absolute {0}.",
+        "Students receive a 15% {1} on all books.",
+        "During the January sales, many designer coats were {2} by half price.",
+        "Excuse me, where is the {3} room? I would like to try these jeans on.",
+        "I wanted to buy those boots, but my size was completely out of {4}.",
+        "Instead of waiting for home delivery, I chose click and {5}.",
+        "To avoid {6} buying, always prepare a shopping list before leaving home.",
+        "Keep your sales {7} in case you want to return or {8} the dress."
+      ],
+      answers:[
+        ["bargain"],
+        ["discount"],
+        ["reduced"],
+        ["changing"],
+        ["stock"],
+        ["collect"],
+        ["impulse"],
+        ["receipt"],
+        ["exchange"]
+      ]
+    },
+    
+    { type:'choice', id:'t11ex4', tag:'11.4', title:"Choose the correct shopping word", instr:"Select the correct word to avoid common learner errors in shopping English.",
+      qs:[
+        {text:"These shoes are too tight; they don't", options:["suit me","fit me"], suffix:"well.", answer:"fit me"},
+        {text:"That dark green jumper really", options:["fits you","suits you"], suffix:"; it matches your eyes perfectly.", answer:"suits you"},
+        {text:"The shop assistant handed me my change and the printed", options:["receipt","recipe"], suffix:".", answer:"receipt"},
+        {text:"Many fashion items are currently", options:["in sale","on sale"], suffix:"with up to 50% off.", answer:"on sale"},
+        {text:"The jacket is available in store, but the matching trousers are", options:["out of stock","out of store"], suffix:".", answer:"out of stock"},
+        {text:"I bought these headphones on", options:["sudden","impulse"], suffix:"because they were heavily discounted.", answer:"impulse"}
+      ]
+    }
+  ]
 }
 
 ];
@@ -1166,7 +1400,8 @@ function renderApp(){
       else if(b.type==='mistakes') html += '<div class="mistake-pair"><div class="mistake-col wrong"><h5>Common mistake</h5>'+b.wrong.map(x=>'<div>'+x+'</div>').join('')+'</div><div class="mistake-col right"><h5>Correct</h5>'+b.right.map(x=>'<div>'+x+'</div>').join('')+'</div></div>';
       else if(b.type==='meme') html += '<div class="meme-placeholder"><span class="icon">🖼️</span><span class="caption">'+b.caption+'</span></div>';
       else if(b.type==='illustration') html += '<figure class="illustration-card">'+b.svg+'<figcaption>'+b.caption+'</figcaption></figure>';
-      else if(b.type==='image') html += '<figure class="illustration-card"><img src="'+b.src+'" alt="'+b.alt+'" loading="lazy"><figcaption>'+b.caption+'</figcaption></figure>';
+      else if(b.type==='image') html += '<figure class="illustration-card"><img src="'+b.src+'" alt="'+(b.alt||'')+'" loading="lazy"><figcaption>'+b.caption+'</figcaption></figure>';
+      else if(b.type==='reading') html += '<div class="reading-card"><h4>'+b.title+'</h4><div class="reading-text">'+b.html+'</div></div>';
       else if(b.type==='reftable') html += '<div style="overflow-x:auto"><table class="ref-table"><thead><tr>'+b.headers.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+b.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
     });
     bodyWrap.innerHTML = html;

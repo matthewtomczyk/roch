@@ -1,0 +1,14 @@
+{
+  type: 'reading',
+  title: "Shopping – Finding the Best Deals",
+  html: `
+    Last Saturday, I went shopping because I needed a new pair of trainers and some clothes. I decided to compare prices online before visiting the shops. I wanted to find a real <strong>bargain</strong> rather than <strong>pay full price</strong>. One website was offering a 30% <strong>discount</strong>, while another had a special <strong>offer</strong> with free delivery. I also checked whether I could use a <strong>voucher</strong> or <strong>discount code</strong> to save even more money.
+
+    <p>When I arrived at the shopping centre, I noticed that several shops were having a <strong>sale</strong>. Some items were <strong>reduced</strong>, but I wasn't sure whether they were actually good value for money. I found a jacket with a large <strong>price tag</strong> showing the original price and the new sale price. Although it looked attractive, I decided to check the quality before making a purchase. I didn't want to buy something just because it was cheap.</p>
+
+    <p>In one shop, I tried on a few items in the <strong>changing room</strong> and asked a shop assistant whether they had a different size. Unfortunately, the trainers I wanted were out of stock. The assistant suggested ordering them online, where I could choose home <strong>delivery</strong> or <strong>click and collect</strong>. I decided to place an order and pay by card.</p>
+
+    <p>Before buying anything else, I thought carefully about my <strong>consumer choices</strong>. I try to avoid <strong>impulse buying</strong> and only purchase things I really need. I always check the <strong>reviews</strong>, compare different <strong>brands</strong> and consider whether a product is worth the money. I also keep the <strong>receipt</strong> in case I need to <strong>return</strong> or <strong>exchange</strong> an item. In the end, I bought a few things at a reasonable price and felt that I had made a sensible shopping decision.</p>
+  `
+},
+
