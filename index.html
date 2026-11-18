@@ -314,7 +314,7 @@
   <div class="top-masthead-inner">
     <p class="kicker">Interactive workbook for Roch</p>
     <h1>Unit 1 Interactive Workbook</h1>
-    <p class="progress-note">11 interactive units &mdash; grammar, vocabulary, reading, and practice.</p>
+    <p class="progress-note">12 interactive units &mdash; grammar, vocabulary, reading, and practice.</p>
   </div>
 </div>
 
@@ -330,7 +330,7 @@
 <div class="wrap">
   <div class="closing-note">
     <h3>Keep Practising!</h3>
-    <p>11 essential units completed &mdash; review your answers, master the rules, and check back for more units soon.</p>
+    <p>12 essential units completed &mdash; review your answers, master the rules, and check back for more units soon.</p>
   </div>
   <footer>
     Original explanations, examples, and exercises by the author. Diagrams on this page are original illustrations, redrawn for this workbook.
@@ -449,15 +449,27 @@ function resetMatch(exId){
 
 /* ---------- Choice exercise (generic) ---------- */
 const CHOICE = {};
-function renderChoice(exId, qs){
+const CHOICE_SHUFFLE = {};
+/* Fisher-Yates: returns a shuffled copy, leaving the original order untouched */
+function shuffleArr(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+function renderChoice(exId, qs, shuffle){
   CHOICE[exId] = qs;
+  CHOICE_SHUFFLE[exId] = !!shuffle;
   const list = document.getElementById(exId+'-list');
   list.innerHTML='';
   qs.forEach((q,i)=>{
     const li = document.createElement('li');
     li.dataset.idx = i;
     let optsHtml = '';
-    q.options.forEach(opt=>{ optsHtml += '<span class="choice-pill" data-opt="'+opt+'">'+opt+'</span>'; });
+    const opts = shuffle ? shuffleArr(q.options) : q.options;
+    opts.forEach(opt=>{ optsHtml += '<span class="choice-pill" data-opt="'+opt+'">'+opt+'</span>'; });
     li.innerHTML = '<span class="qnum">'+(i+1)+'</span> '+q.text+' '+optsHtml+' '+q.suffix;
     li.querySelectorAll('.choice-pill').forEach(pill=>{
       pill.onclick = ()=>{
@@ -496,7 +508,7 @@ function revealChoice(exId){
   document.getElementById(exId+'-score').textContent = 'Answers revealed';
 }
 function resetChoice(exId){
-  renderChoice(exId, CHOICE[exId]);
+  renderChoice(exId, CHOICE[exId], CHOICE_SHUFFLE[exId]);
   document.getElementById(exId+'-score').textContent = '';
 }
 </script>
@@ -1362,6 +1374,114 @@ const TOPICS = [
       ]
     }
   ]
+},
+
+/* =========================================================
+   Unit 12: Have Something Done
+   ========================================================= */
+{ id:'t12', num:12, title:"Have Something Done",
+  blocks:[
+    {type:'p', html:"We use <strong>have something done</strong> (or <strong>get something done</strong>) to say that we <strong>arrange for somebody else</strong> to do a job for us. The speaker pays and makes the arrangements; somebody else does the work. Lisa did not repair her roof &mdash; she <strong>had the roof repaired</strong>."},
+    {type:'reftable', headers:["Form","Structure","Example"], rows:[
+      ["Present (routine)","have / get + object + <strong>past participle</strong>","I <strong>get my car serviced</strong> every year."],
+      ["Present continuous","am / is / are having + object + <strong>past participle</strong>","We <strong>are having our windows replaced</strong> this week."],
+      ["Past","had + object + <strong>past participle</strong>","Lisa <strong>had the roof repaired</strong> yesterday."],
+      ["Negative","haven't / hasn't had + object + <strong>past participle</strong>","I <strong>haven't had</strong> my windows <strong>cleaned</strong> yet."],
+      ["Question","Have / Has + subject + had + object + <strong>past participle</strong>?","<strong>Has she had</strong> her hair <strong>cut</strong>?"]
+    ]},
+    {type:'bubbles', items:[
+      "“Have you <b>had your car serviced</b> yet?” “Yes, I <b>had it serviced</b> yesterday.”",
+      "We<b>'re having</b> the kitchen <b>repainted</b> before the new tenants arrive.",
+      "My dad <b>had the roof repaired</b> last winter after the storm.",
+      "“Your hair looks different!” “I <b>got it cut</b> this morning.”"
+    ]},
+    {type:'notes', items:[
+      "<b>The basic pattern:</b>",
+      "&bull; Subject + <b>have / get</b> + <b>object</b> + <b>past participle</b> &mdash; <i>I <b>had</b> my windows <b>cleaned</b>.</i>",
+      "&bull; The <b>object</b> (the thing that is done) goes <b>between</b> the verb and the past participle.",
+      "<b>Who does the work?</b>",
+      "&bull; Normally <b>somebody else</b> does it: <i>I had my hair cut</i> &mdash; the hairdresser cut it, not me.",
+      "&bull; To name the person, use the <b>bare infinitive</b>: <i>I had <b>the builder repair</b> the roof.</i>",
+      "<b>Watch out!</b>",
+      "&bull; <b>get</b> is a more informal alternative to <b>have</b>: <i>I <b>got</b> my car <b>serviced</b>.</i>",
+      "&bull; Do not confuse this with the perfect: <i>I <b>have finished</b> my homework</i> (&ne;) <i>I <b>had my homework checked</b>.</i>"
+    ]},
+    {type:'terms', items:[
+      "I have my <strong>hair cut</strong> every six weeks.",
+      "She is having her <strong>eyes tested</strong> before she starts driving.",
+      "We had the <strong>boiler serviced</strong> in September.",
+      "They had their <strong>old sofa removed</strong> by a charity.",
+      "He got his suit <strong>made to measure</strong> in Savile Row."
+    ]},
+    {type:'image', src:"have-done.png", alt:"A builder kneeling on a ladder repairing the tiles of a damaged roof while a woman watches from the ground below.",
+      caption:"Lisa had the roof repaired yesterday — she arranged it, but she did not do the work herself."
+    },
+    {type:'mistakes',
+      wrong:[
+        "I had cut my hair at the salon yesterday.",
+        "She had her house paint last week.",
+        "We had our old sofa to remove last month.",
+        "He is having repair his kitchen."
+      ],
+      right:[
+        "I had my hair cut at the salon yesterday. (somebody else did the cutting)",
+        "She had her house painted last week. (use the past participle after the object)",
+        "We had our old sofa removed last month. (never use 'to' + verb in this structure)",
+        "He is having his kitchen repaired. (the object goes between 'having' and the participle)"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t12ex1', tag:'12.1', title:"Complete with have / get something done", instr:"Write the correct form of have/get + object + past participle.",
+      lines:[
+        "Last week I {0|given:had my hair cut} at the salon — it was a complete transformation.",
+        "I {1} (have) my windows {2} (clean) every spring.",
+        "She is {3} (have) her kitchen {4} (paint) at the moment.",
+        "We had our old sofa {5} (remove) last month.",
+        "Have you {6} (have) your car {7} (service) before the long drive?",
+        "He got his suit {8} (make) for the wedding.",
+        "I haven't had my flat {9} (renovate) yet.",
+        "My parents had the builder {10} (repair) the roof last winter.",
+        "I'm going to {11} (have) my eyes {12} (test) before I start driving."
+      ],
+      answers:[
+        ["had my hair cut"],
+        ["have"],
+        ["cleaned"],
+        ["having"],
+        ["painted"],
+        ["removed"],
+        ["had"],
+        ["serviced"],
+        ["made"],
+        ["renovated"],
+        ["repair"],
+        ["have"],
+        ["tested"]
+      ]
+    },
+    { type:'choice', id:'t12ex2', tag:'12.2', title:"Choose the correct form", instr:"Select the correct causative sentence.", shuffle:true,
+      qs:[
+        {text:"The kitchen is a mess, so", options:["she's having it repainted","she's having repainted it"], suffix:"next week.", answer:"she's having it repainted"},
+        {text:"Last month I", options:["had my hair cut","had cut my hair"], suffix:"at a new salon.", answer:"had my hair cut"},
+        {text:"We got our windows", options:["cleaned last spring","clean last spring"], suffix:"by a professional company.", answer:"cleaned last spring"},
+        {text:"Have you ever", options:["had your eyes tested","had your eyes test"], suffix:"before starting to drive?", answer:"had your eyes tested"},
+        {text:"My parents had the builder", options:["repair the roof","to repair the roof"], suffix:"last winter.", answer:"repair the roof"},
+        {text:"I haven't", options:["had the car serviced","had the car service"], suffix:"yet.", answer:"had the car serviced"}
+      ]
+    },
+    { type:'match', id:'t12ex3', tag:'12.3', title:"Match the collocations to their meanings", instr:"Click an expression on the left, then click its meaning on the right.",
+      leftLabel:"Expression", rightLabel:"Meaning",
+      pairs:[
+        {desc:"Have a check-up", key:"checkup", label:"To visit a doctor for a general medical examination"},
+        {desc:"Have your hair cut", key:"haircut", label:"To go to a hairdresser to have your hair restyled"},
+        {desc:"Have the boiler serviced", key:"boiler", label:"To call an engineer to inspect and maintain your boiler"},
+        {desc:"Have a leak looked at", key:"leak", label:"To ask somebody to find and repair where water is getting in"},
+        {desc:"Have the flat redecorated", key:"decorated", label:"To pay somebody to paint and paper the rooms in your flat"},
+        {desc:"Have your teeth whitened", key:"whitened", label:"To go to the dentist to have your teeth made whiter"}
+      ]
+    }
+  ]
 }
 
 ];
@@ -1434,7 +1554,7 @@ function renderApp(){
       } else if(ex.type==='match'){
         renderMatch(ex.id, ex.pairs);
       } else if(ex.type==='choice'){
-        renderChoice(ex.id, ex.qs);
+        renderChoice(ex.id, ex.qs, ex.shuffle);
       }
     });
   });
