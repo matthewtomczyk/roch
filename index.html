@@ -1482,11 +1482,203 @@ const TOPICS = [
       ]
     }
   ]
+},
+
+/* =========================================================
+   Unit 13: Will / Won't
+   ========================================================= */
+{ id:'t13', num:13, title:"Will / Won't",
+  blocks:[
+    {type:'p', html:"We use <strong>will</strong> (positive) and <strong>won't</strong> (negative) to talk about the future &mdash; especially for <strong>predictions</strong>, <strong>spontaneous decisions</strong> made at the moment of speaking, and <strong>promises or offers</strong>."},
+    {type:'reftable', headers:["Form","Structure","Example"], rows:[
+      ["<strong>Positive</strong>","Subject + <strong>will</strong> + base verb","I <strong>will help</strong> you with your homework."],
+      ["<strong>Negative</strong>","Subject + <strong>won't</strong> + base verb","She <strong>won't be</strong> late, I promise."],
+      ["<strong>Question</strong>","<strong>Will</strong> + subject + base verb?","<strong>Will</strong> it <strong>rain</strong> tomorrow?"]
+    ]},
+    {type:'p', html:"<strong>When do we use will?</strong>"},
+    {type:'terms', items:[
+      "<strong>Prediction:</strong> I think it <strong>will snow</strong> tonight.",
+      "<strong>Spontaneous decision:</strong> &ldquo;The phone is ringing!&rdquo; &ldquo;I<strong>'ll get</strong> it!&rdquo;",
+      "<strong>Promise:</strong> I <strong>won't tell</strong> anyone your secret.",
+      "<strong>Offer:</strong> You look tired &mdash; I<strong>'ll make</strong> you a cup of tea."
+    ]},
+    {type:'bubbles', items:[
+      "I think robots <b>will do</b> most housework in the future.",
+      "&ldquo;There&rsquo;s no milk left.&rdquo; &ldquo;Don&rsquo;t worry, I<b>&rsquo;ll buy</b> some on the way home.&rdquo;",
+      "&ldquo;<b>Will</b> you <b>be</b> at the party on Saturday?&rdquo; &ldquo;Yes, I<b>&rsquo;ll be</b> there at seven.&rdquo;",
+      "I promise I <b>won&rsquo;t forget</b> your birthday this year!"
+    ]},
+    {type:'notes', items:[
+      "<b>Key points:</b>",
+      "&bull; <b>will</b> is a modal verb &mdash; it never changes form (no <i>wills</i> for he/she/it).",
+      "&bull; Contraction: <i>I will &rarr; I'll, he will &rarr; he'll, they will &rarr; they'll</i>.",
+      "&bull; Negative contraction: <i>will not &rarr; won't</i>.",
+      "&bull; After will, always use the <b>base verb</b> (infinitive without <i>to</i>): say <i>It will <b>be</b> cold</i>, never <i>It will <b>to be</b></i>."
+    ]},
+    {type:'mistakes',
+      wrong:[
+        "I will to call you later.",
+        "She wills arrive at noon.",
+        "I will not going to the party.",
+        "Will you to help me?"
+      ],
+      right:[
+        "I will call you later. (base verb after will; no 'to')",
+        "She will arrive at noon. (will never takes -s)",
+        "I won't go to the party. (won't + base verb; not 'going to')",
+        "Will you help me? (base verb in questions; no 'to')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'cloze', id:'t13ex1', tag:'13.1', title:"Complete with will or won't", instr:"Write will or won't to complete each sentence logically.",
+      lines:[
+        "I think Barcelona {0|given:will win} the match tonight.",
+        "Don't worry, I {1} be late &mdash; I promise.",
+        "Look at those black clouds &mdash; it {2} rain this afternoon.",
+        "I {3} tell anyone what you said, I swear.",
+        "Do you think humans {4} live on Mars one day?",
+        "It's very cold today, so I {5} wear my thick coat.",
+        "She {6} come to the meeting &mdash; she is ill.",
+        "\"There's no bread left.\" \"OK, I {7} go to the shop.\""
+      ],
+      answers:[
+        ["will win"],
+        ["won't","will not"],
+        ["will"],
+        ["won't","will not"],
+        ["will"],
+        ["will"],
+        ["won't","will not"],
+        ["'ll","will"]
+      ]
+    },
+    { type:'choice', id:'t13ex2', tag:'13.2', title:"Choose the correct form", instr:"Select the correct option to complete each sentence.",
+      qs:[
+        {text:"I think electric cars", options:["will replace","will to replace"], suffix:"petrol cars in the next twenty years.", answer:"will replace"},
+        {text:"\"The phone is ringing!\"", options:["I'll answer it.","I will to answer it."], suffix:"", answer:"I'll answer it."},
+        {text:"Don't worry, it", options:["won't hurt","won't to hurt"], suffix:"at all.", answer:"won't hurt"},
+        {text:"", options:["Will she come","Will she comes"], suffix:"to the party tonight?", answer:"Will she come"},
+        {text:"He", options:["won't","willn't"], suffix:"help us if we don't ask nicely.", answer:"won't"},
+        {text:"I promise I", options:["won't forget","will not to forget"], suffix:"to lock the door.", answer:"won't forget"}
+      ]
+    },
+    { type:'match', id:'t13ex3', tag:'13.3', title:"Match the use to the example", instr:"Click a use of <i>will</i> on the left, then click the matching example sentence on the right.",
+      leftLabel:"Use of will", rightLabel:"Example sentence",
+      pairs:[
+        {desc:"Prediction", key:"pred", label:"I think it will be sunny tomorrow."},
+        {desc:"Spontaneous decision", key:"spon", label:"\"The doorbell rang!\" \"I'll go!\""},
+        {desc:"Promise", key:"prom", label:"I won't tell anyone your secret."},
+        {desc:"Offer", key:"off", label:"You look cold &mdash; I'll get you a blanket."},
+        {desc:"Future fact", key:"fact", label:"The Sun will rise at 6:42 tomorrow."}
+      ]
+    }
+  ]
+},
+
+/* =========================================================
+   Unit 14: Technology Verbs
+   ========================================================= */
+{ id:'t14', num:14, title:"Technology Verbs",
+  blocks:[
+    {type:'p', html:"We use lots of special <strong>verbs</strong> when we talk about computers, tablets, and phones. Learning which <strong>nouns</strong> go with each verb will help you speak and write clearly about technology."},
+    {type:'reftable', headers:["Verb","What it means","Example"], rows:[
+      ["<strong>connect</strong>","to join two devices or link to the internet","<em>Connect</em> your tablet <em>to</em> the Wi-Fi."],
+      ["<strong>print</strong>","to put words or pictures onto paper using a printer","Can you <em>print</em> this document for me?"],
+      ["<strong>send</strong>","to deliver a message, file, or email to someone","I'll <em>send</em> you the photo by email."],
+      ["<strong>download</strong>","to copy a file from the internet onto your device","<em>Download</em> the app from the app store."],
+      ["<strong>upload</strong>","to send a file from your device to the internet","She <em>uploaded</em> her video to YouTube."],
+      ["<strong>save</strong>","to keep a file so you don't lose it","Remember to <em>save</em> your work!"],
+      ["<strong>delete</strong>","to remove a file or message permanently","He <em>deleted</em> the old photos to free up space."],
+      ["<strong>type</strong>","to write using a keyboard","<em>Type</em> your password in the box."],
+      ["<strong>click</strong>","to press a button on a mouse or touchscreen","<em>Click</em> the green button to start."],
+      ["<strong>search</strong>","to look for information online","<em>Search</em> for the answer on the internet."]
+    ]},
+    {type:'bubbles', items:[
+      "I need to <b>download</b> that app — it looks really fun!",
+      "Please <b>save</b> your work before you turn off the computer.",
+      "<b>Connect</b> your laptop <b>to</b> the projector, then <b>click</b> 'Share Screen'.",
+      "She <b>sent</b> a video message to her grandparents in Poland."
+    ]},
+    {type:'notes', items:[
+      "<b>Useful collocations (verb + noun pairs):</b>",
+      "&bull; <b>connect</b> to &mdash; the Wi-Fi / the internet / a Bluetooth speaker",
+      "&bull; <b>send</b> &mdash; an email / a message / a file / a photo",
+      "&bull; <b>print</b> &mdash; a document / a photo / a page / a ticket",
+      "&bull; <b>download</b> &mdash; an app / a song / a file / a game",
+      "&bull; <b>save</b> &mdash; a file / a document / a photo / your work",
+      "&bull; <b>delete</b> &mdash; a file / a message / an account / an app",
+      "&bull; <b>search</b> &mdash; for information / for a word / on Google"
+    ]},
+    {type:'mistakes',
+      wrong:[
+        "I will download the app from internet.",
+        "She saved the file in the computer.",
+        "Can you send me the photo to WhatsApp?",
+        "He printed the document in the printer."
+      ],
+      right:[
+        "I will download the app from the internet. (always 'the internet')",
+        "She saved the file on the computer. (use 'on', not 'in', with devices)",
+        "Can you send me the photo on WhatsApp? (use 'on' for messaging apps)",
+        "He printed the document on the printer. (use 'on', not 'in')"
+      ]
+    }
+  ],
+  exercises:[
+    { type:'match', id:'t14ex1', tag:'14.1', title:"Match the verb to its meaning", instr:"Click a technology verb on the left, then click its correct meaning on the right.",
+      leftLabel:"Verb", rightLabel:"Meaning",
+      pairs:[
+        {desc:"connect", key:"conn", label:"to join your device to the internet or another device"},
+        {desc:"download", key:"down", label:"to copy a file from the internet to your device"},
+        {desc:"upload", key:"up", label:"to send a file from your device to the internet"},
+        {desc:"delete", key:"del", label:"to remove a file or message so it is gone forever"},
+        {desc:"save", key:"sav", label:"to keep a file so you can use it again later"},
+        {desc:"search", key:"sea", label:"to look for information online"},
+        {desc:"type", key:"typ", label:"to write using the keys on a keyboard"},
+        {desc:"click", key:"cli", label:"to press a button on a mouse or touchscreen"}
+      ]
+    },
+    { type:'match', id:'t14ex2', tag:'14.2', title:"Match the verb to its noun partner", instr:"Click a verb on the left, then click the noun it goes with on the right.",
+      leftLabel:"Verb", rightLabel:"Noun",
+      pairs:[
+        {desc:"send", key:"send", label:"an email"},
+        {desc:"print", key:"print", label:"a document"},
+        {desc:"download", key:"dl", label:"an app"},
+        {desc:"save", key:"save", label:"your work"},
+        {desc:"connect", key:"con", label:"to the Wi-Fi"},
+        {desc:"delete", key:"delet", label:"a message"},
+        {desc:"search", key:"srch", label:"for information"},
+        {desc:"type", key:"typ2", label:"your password"}
+      ]
+    },
+    { type:'cloze', id:'t14ex3', tag:'14.3', title:"Complete the sentences", instr:"Choose the correct technology verb from the box to complete each sentence.",
+      bank:["connect","delete","download","print","save","search","send","type"],
+      lines:[
+        "Please {0} your name and password in the boxes below.",
+        "I want to {1} this new game from the app store.",
+        "Can you {2} two copies of this letter, please?",
+        "She needs to {3} her laptop to the school Wi-Fi.",
+        "He forgot to {4} his essay and lost all his work.",
+        "If you don't want the email, just {5} it.",
+        "I'll {6} you a link to the video right now.",
+        "We can {7} for the answer on the internet."
+      ],
+      answers:[
+        ["type"],
+        ["download"],
+        ["print"],
+        ["connect"],
+        ["save"],
+        ["delete"],
+        ["send"],
+        ["search"]
+      ]
+    }
+  ]
 }
 
 ];
-
-function renderApp(){
   const contentsGrid = document.getElementById('contents-grid');
   const root = document.getElementById('topics-root');
   const n = TOPICS.length;
