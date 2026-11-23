@@ -1215,7 +1215,7 @@ const TOPICS = [
   exercises:[
 { type:'choice', id:'t10ex3', tag:'10.1', title:"Reading comprehension: A Difficult Month", instr:"Select the correct answer based on the reading passage.",
       qs:[
-        {text:"Why was the writer short of money at the start of the month?", options:[,"He lost his wallet while travelling on the bus", "He spent a fortune on shopping and unexpected expenses"], suffix:"", answer:"He spent a fortune on shopping and unexpected expenses"},
+        {text:"Why was the writer short of money at the start of the month?", options:["He lost his wallet while travelling on the bus", "He spent a fortune on shopping and unexpected expenses"], suffix:"", answer:"He spent a fortune on shopping and unexpected expenses"},
         {text:"What occurred when the writer attempted to pay at the supermarket?", options:["His debit card was declined","The supermarket card machine was broken"], suffix:"", answer:"His debit card was declined"},
         {text:"Why did the cashpoint charge an extra fee?", options:["For printing a balance receipt", "For the cash withdrawal"], suffix:"", answer:"For the cash withdrawal"},
         {text:"Why did the writer decide to exchange euros for pounds?", options:["He was planning an overseas business trip", "The exchange rate was quite favourable"], suffix:"", answer:"The exchange rate was quite favourable"},
@@ -1533,7 +1533,7 @@ const TOPICS = [
   exercises:[
     { type:'cloze', id:'t13ex1', tag:'13.1', title:"Complete with will or won't", instr:"Write will or won't to complete each sentence logically.",
       lines:[
-        "I think Barcelona {0|given:will win} the match tonight.",
+        "I think Barcelona {0|given:will} win the match tonight.",
         "Don't worry, I {1} be late &mdash; I promise.",
         "Look at those black clouds &mdash; it {2} rain this afternoon.",
         "I {3} tell anyone what you said, I swear.",
@@ -1543,7 +1543,7 @@ const TOPICS = [
         "\"There's no bread left.\" \"OK, I {7} go to the shop.\""
       ],
       answers:[
-        ["will win"],
+        ["will"],
         ["won't","will not"],
         ["will"],
         ["won't","will not"],
@@ -1553,7 +1553,7 @@ const TOPICS = [
         ["'ll","will"]
       ]
     },
-    { type:'choice', id:'t13ex2', tag:'13.2', title:"Choose the correct form", instr:"Select the correct option to complete each sentence.",
+    { type:'choice', id:'t13ex2', tag:'13.2', title:"Choose the correct form", instr:"Select the correct option to complete each sentence.", shuffle:true,
       qs:[
         {text:"I think electric cars", options:["will replace","will to replace"], suffix:"petrol cars in the next twenty years.", answer:"will replace"},
         {text:"\"The phone is ringing!\"", options:["I'll answer it.","I will to answer it."], suffix:"", answer:"I'll answer it."},
@@ -1561,16 +1561,6 @@ const TOPICS = [
         {text:"", options:["Will she come","Will she comes"], suffix:"to the party tonight?", answer:"Will she come"},
         {text:"He", options:["won't","willn't"], suffix:"help us if we don't ask nicely.", answer:"won't"},
         {text:"I promise I", options:["won't forget","will not to forget"], suffix:"to lock the door.", answer:"won't forget"}
-      ]
-    },
-    { type:'match', id:'t13ex3', tag:'13.3', title:"Match the use to the example", instr:"Click a use of <i>will</i> on the left, then click the matching example sentence on the right.",
-      leftLabel:"Use of will", rightLabel:"Example sentence",
-      pairs:[
-        {desc:"Prediction", key:"pred", label:"I think it will be sunny tomorrow."},
-        {desc:"Spontaneous decision", key:"spon", label:"\"The doorbell rang!\" \"I'll go!\""},
-        {desc:"Promise", key:"prom", label:"I won't tell anyone your secret."},
-        {desc:"Offer", key:"off", label:"You look cold &mdash; I'll get you a blanket."},
-        {desc:"Future fact", key:"fact", label:"The Sun will rise at 6:42 tomorrow."}
       ]
     }
   ]
@@ -1582,20 +1572,20 @@ const TOPICS = [
 { id:'t14', num:14, title:"Technology Verbs",
   blocks:[
     {type:'p', html:"We use lots of special <strong>verbs</strong> when we talk about computers, tablets, and phones. Learning which <strong>nouns</strong> go with each verb will help you speak and write clearly about technology."},
-    {type:'reftable', headers:["Verb","What it means","Example"], rows:[
-      ["<strong>connect</strong>","to join two devices or link to the internet","<em>Connect</em> your tablet <em>to</em> the Wi-Fi."],
-      ["<strong>print</strong>","to put words or pictures onto paper using a printer","Can you <em>print</em> this document for me?"],
-      ["<strong>send</strong>","to deliver a message, file, or email to someone","I'll <em>send</em> you the photo by email."],
-      ["<strong>download</strong>","to copy a file from the internet onto your device","<em>Download</em> the app from the app store."],
-      ["<strong>upload</strong>","to send a file from your device to the internet","She <em>uploaded</em> her video to YouTube."],
-      ["<strong>save</strong>","to keep a file so you don't lose it","Remember to <em>save</em> your work!"],
-      ["<strong>delete</strong>","to remove a file or message permanently","He <em>deleted</em> the old photos to free up space."],
-      ["<strong>type</strong>","to write using a keyboard","<em>Type</em> your password in the box."],
-      ["<strong>click</strong>","to press a button on a mouse or touchscreen","<em>Click</em> the green button to start."],
-      ["<strong>search</strong>","to look for information online","<em>Search</em> for the answer on the internet."]
+    {type:'reftable', headers:["Verb","Po polsku","Example"], rows:[
+      ["<strong>connect</strong>","połączyć","<em>Connect</em> your tablet <em>to</em> the Wi-Fi."],
+      ["<strong>print</strong>","drukować","Can you <em>print</em> this document for me?"],
+      ["<strong>send</strong>","wysłać, przesłać","I'll <em>send</em> you the photo by email."],
+      ["<strong>download</strong>","pobrać","<em>Download</em> the app from the app store."],
+      ["<strong>upload</strong>","wgrać, wysłać do internetu","She <em>uploaded</em> her video to YouTube."],
+      ["<strong>save</strong>","zapisać","Remember to <em>save</em> your work!"],
+      ["<strong>delete</strong>","usunąć, skasować","He <em>deleted</em> the old photos to free up space."],
+      ["<strong>type</strong>","wpisywać, pisać","<em>Type</em> your password in the box."],
+      ["<strong>click</strong>","kliknąć","<em>Click</em> the green button to start."],
+      ["<strong>search</strong>","szukać, wyszukiwać","<em>Search</em> for the answer on the internet."]
     ]},
     {type:'bubbles', items:[
-      "I need to <b>download</b> that app — it looks really fun!",
+      "I need to <b>download</b> that app &mdash; it looks really fun!",
       "Please <b>save</b> your work before you turn off the computer.",
       "<b>Connect</b> your laptop <b>to</b> the projector, then <b>click</b> 'Share Screen'.",
       "She <b>sent</b> a video message to her grandparents in Poland."
@@ -1679,6 +1669,8 @@ const TOPICS = [
 }
 
 ];
+
+function renderApp(){
   const contentsGrid = document.getElementById('contents-grid');
   const root = document.getElementById('topics-root');
   const n = TOPICS.length;
