@@ -300,6 +300,34 @@
   .ref-table th, .ref-table td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
   .ref-table th{ font-family:"Poppins",sans-serif; font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); }
 
+  /* Pronunciation practice */
+  .pron-card{
+    margin-top:24px; padding:22px;
+    background:var(--panel); border:1px solid var(--line); border-radius:10px;
+  }
+  .pron-card h4{ margin:0 0 6px; font-family:"Poppins",sans-serif; font-size:1.1rem; }
+  .pron-card .pron-instr{ color:var(--ink-soft); font-size:.94rem; margin:0 0 16px; }
+  .pron-card .pron-instr b{ color:var(--ink); font-weight:600; }
+  .pron-list{ list-style:none; margin:0 0 18px; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:10px; }
+  .pron-item{
+    display:flex; align-items:center; gap:10px;
+    padding:10px 13px; background:var(--paper);
+    border:1.5px solid var(--line-strong); border-radius:8px;
+    font-family:"Poppins",sans-serif; font-weight:600; font-size:.95rem;
+    cursor:pointer; user-select:none;
+  }
+  .pron-item:hover{ border-color:var(--red-mid); }
+  .pron-check{
+    flex:0 0 auto; width:18px; height:18px; border-radius:5px;
+    border:1.5px solid var(--line-strong); background:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-size:.72rem; line-height:1; color:transparent;
+  }
+  .pron-item.checked{ border-color:var(--good); background:var(--good-bg); }
+  .pron-item.checked .pron-check{ background:var(--good); border-color:var(--good); color:#fff; }
+  .pron-audio{ width:100%; max-width:540px; display:block; margin:0; }
+  .pron-note{ margin:12px 0 0; font-size:.86rem; color:var(--ink-faint); font-style:italic; }
+
   /* Closing note */
   .closing-note{
     margin:52px 0 0; background:var(--red-fill); color:#fff; border-radius:12px; padding:26px 26px 24px; text-align:center;
@@ -1584,6 +1612,11 @@ const TOPICS = [
       ["<strong>click</strong>","kliknąć","<em>Click</em> the green button to start."],
       ["<strong>search</strong>","szukać, wyszukiwać","<em>Search</em> for the answer on the internet."]
     ]},
+    {type:'pron', title:"Pronunciation: technology words",
+      instr:"Read the eight words below aloud first. Then press play and compare &mdash; listen for the stress and the sounds, repeat after the recording, and tick each word when your pronunciation matches.",
+      words:["Wireless","Website","Wi-Fi","Video","Digital","Device","Feed","Delete"],
+      src:"technology.mp3",
+      note:"The recording reads the words in the same order as the list. Click a word to tick it off, and replay the audio as often as you like."},
     {type:'bubbles', items:[
       "I need to <b>download</b> that app &mdash; it looks really fun!",
       "Please <b>save</b> your work before you turn off the computer.",
@@ -1707,6 +1740,7 @@ function renderApp(){
       else if(b.type==='image') html += '<figure class="illustration-card"><img src="'+b.src+'" alt="'+(b.alt||'')+'" loading="lazy"><figcaption>'+b.caption+'</figcaption></figure>';
       else if(b.type==='reading') html += '<div class="reading-card"><h4>'+b.title+'</h4><div class="reading-text">'+b.html+'</div></div>';
       else if(b.type==='reftable') html += '<div style="overflow-x:auto"><table class="ref-table"><thead><tr>'+b.headers.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+b.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+      else if(b.type==='pron') html += '<div class="pron-card"><h4>'+b.title+'</h4><p class="pron-instr">'+b.instr+'</p><ul class="pron-list">'+b.words.map(w=>'<li class="pron-item" onclick="this.classList.toggle(\'checked\')"><span class="pron-check">&#10003;</span><span class="pron-word">'+w+'</span></li>').join('')+'</ul><audio class="pron-audio" controls preload="metadata" aria-label="Pronunciation recording: '+b.src+'"><source src="'+b.src+'" type="audio/mpeg">Your browser does not support audio &mdash; <a href="'+b.src+'">open '+b.src+'</a>.</audio><p class="pron-note">'+b.note+'</p></div>';
     });
     bodyWrap.innerHTML = html;
 
